@@ -4,15 +4,19 @@ set -e -u
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Ansible..."
 
-# if command -v ansible 1>/dev/null 2>&1; then
+PREFIX="$HOME/.miniconda3/bin"
+ANSIBLE="$PREFIX/ansible"
+PIP="$PREFIX/pip"
+
+# if command -v "$ANSIBLE" 1>/dev/null 2>&1; then
 #     echo "Ansible already installed"
 #     exit 0
 # fi
 
-if ! command -v pip 1>/dev/null 2>&1; then
+if ! command -v "$PIP" 1>/dev/null 2>&1; then
     echo "pip not found"
     exit 1
 fi
 
-pip install --upgrade ansible
+"$PIP" install --upgrade ansible
 

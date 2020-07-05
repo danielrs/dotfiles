@@ -4,10 +4,13 @@ set -e -u
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Python Neovim..."
 
-if ! command -v pip 1>/dev/null 2>&1; then
+PREFIX="$HOME/.miniconda3/bin"
+PIP="$PREFIX/pip"
+
+if ! command -v "$PIP" 1>/dev/null 2>&1; then
     echo "pip not found"
     exit 1
 fi
 
-pip install --upgrade neovim
+"$PIP" install --upgrade neovim
 
