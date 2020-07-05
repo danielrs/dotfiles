@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+PREFIX=$HOME/.local/bin
+CHEZMOI="$PREFIX/chezmoi"
+BINDIR="$PREFIX" curl -sfL https://git.io/chezmoi | sh
+$CHEZMOI apply
+
