@@ -3,8 +3,13 @@
 # see: https://stackoverflow.com/a/20434740
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-PREFIX=$HOME/.local/bin
-CHEZMOI="$PREFIX/chezmoi"
-BINDIR="$PREFIX" curl -sfL https://git.io/chezmoi | sh
+BINDIR=$HOME/.local/bin
+CHEZMOI="$BINDIR/chezmoi"
+
+export BINDIR
+curl -sfL https://git.io/chezmoi | sh
+
+chmod 700 "$DIR"
+rm "$HOME/.config/chezmoi/chezmoi.toml"
 $CHEZMOI apply --source "$DIR"
 
