@@ -1,0 +1,36 @@
+#!/usr/bin/env sh
+
+set -e -u
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Source Code Pro fonts..."
+
+REPO_URL="https://github.com/adobe-fonts/source-code-pro.git"
+CLONE="./source-code-pro"
+
+# Detect system
+
+if [ `uname` = Darwin ]; then
+    PREFIX="$HOME/Library/Fonts/adobe-fonts/source-code-pro"
+
+elif [ `uname` = Linux ]; then
+    PREFIX="$HOME/.loca/share/fonts/adobe-fonts/source-code-pro"
+
+else
+    echo "Unable to detect system"
+    exit 1
+fi
+
+# Download and install
+
+echo "Cloning repository..."
+git clone --branch release --depth 1 "$REPO_URL" "$CLONE"
+
+echo "Copying fonts..."
+mkdir -p "$PREFIX"
+find "$PREFIX" -iname "*.otf" -type f -maxdepth 1 -delete
+find "$PREFIX" -iname "*.ttf" -type f -maxdepth 1 -delete
+find "$PREFIX" -iname "*.woff" -type f -maxdepth 1 -delete
+find "$PREFIX" -iname "*.woff2" -type f -maxdepth 1 -delete
+cp -r "$CLONE/OTF/." "$PREFIX"
+rm -rf "$CLONE"
+
