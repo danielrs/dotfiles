@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# ~/.bashrc
+#
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    source /etc/bashrc
+fi
+
+# Source aliases
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+# Source common shell configuration
+if [ -f ~/.shellrc ]; then
+    source ~/.shellrc
+fi
+
+# ----------------
+# Configure prompt
+# ----------------
+
+alias tput='/usr/bin/tput'
+
+BLUE=$(tput setaf 4)
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr0)
+
+export PS1="\[$BLUE\][\[$RESET\]\[$GREEN\]\u\[$RESET\]\[$BLUE\]@\[$RESET\]\h \w\[$BLUE\]]\[$RESET\] \[$GREEN\]$\[$RESET\] "
+

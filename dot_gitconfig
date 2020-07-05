@@ -1,0 +1,29 @@
+[user]
+    name = Daniel Rivas
+    email = danielrs@users.noreply.github.com
+
+[core]
+    autocrlf = input
+    ignorecase = false
+
+[push]
+    default = simple
+
+[includeIf "gitdir:~/Development/clearblade/"]
+    path = ~/Development/clearblade/.gitconfig_include
+
+[includeIf "gitdir:~/Development/deepcast/"]
+    path = ~/Development/deepcast/.gitconfig_include
+
+[includeIf "gitdir:~/Development/profile-0/"]
+    path = ~/Development/profile-0/.gitconfig_include
+
+[includeIf "gitdir:~/Development/profile-1/"]
+    path = ~/Development/profile-1/.gitconfig_include
+
+[includeIf "gitdir:~/Development/profile-2/"]
+    path = ~/Development/profile-2/.gitconfig_include
+
+[includeIf "gitdir:~/Development/profile-3/"]
+    path = ~/Development/profile-3/.gitconfig_include
+

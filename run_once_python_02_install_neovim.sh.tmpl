@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+set -e -u
+source '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Python Neovim..."
+
+if ! command -v pip &>/dev/null; then
+    echo "pip not found"
+    exit 1
+fi
+
+pip install --upgrade neovim
+

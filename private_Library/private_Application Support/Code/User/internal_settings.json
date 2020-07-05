@@ -1,0 +1,24 @@
+{
+    "editor.fontFamily": "SourceCodePro-medium, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "files.trimTrailingWhitespace": true,
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Solarized Light",
+
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+
+    "[nim]": {
+        "editor.tabSize": 2
+    },
+
+    "[yaml]": {
+        "editor.tabSize": 2
+    },
+
+    "go.formatTool": "goimports",
+    "go.goroot": "~/.golang",
+    "go.gopath": "~/Development/go",
+    "go.useLanguageServer": true
+}

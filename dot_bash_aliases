@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# ~/.bash_aliases
+#
+
+# Source common aliases
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
+

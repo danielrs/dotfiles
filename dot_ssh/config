@@ -1,0 +1,91 @@
+Host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/id_rsa
+    User remoteusername
+
+Host bitbucket.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/bitbucket_id_rsa
+    User remoteusername
+
+Host bitbucket-clearblade.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/clearblade_id_rsa
+    User remoteusername
+
+Host bitbucket-deepcast.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/deepcast_id_rsa
+    User remoteusername
+
+Host gitlab.com
+    HostName gitlab.com
+    IdentityFile ~/.ssh/gitlab_id_rsa
+    User remoteusername
+
+# GitHub profiles
+
+Host github-0.com
+    HostName github.com
+    IdentityFile ~/.ssh/profile_0_id_rsa
+    User remoteusername
+
+Host github-1.com
+    HostName github.com
+    IdentityFile ~/.ssh/profile_1_id_rsa
+    User remoteusername
+
+Host github-2.com
+    HostName github.com
+    IdentityFile ~/.ssh/profile_2_id_rsa
+    User remoteusername
+
+Host github-3.com
+    HostName github.com
+    IdentityFile ~/.ssh/profile_3_id_rsa
+    User remoteusername
+
+# Bitbucket profiles
+
+Host bitbucket-0.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/profile_0_id_rsa
+    User remoteusername
+
+Host bitbucket-1.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/profile_1_id_rsa
+    User remoteusername
+
+Host bitbucket-2.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/profile_2_id_rsa
+    User remoteusername
+
+Host bitbucket-3.org
+    HostName bitbucket.org
+    IdentityFile ~/.ssh/profile_3_id_rsa
+    User remoteusername
+
+# GitLab profiles
+
+Host gitlab-0.com
+    HostName gitlab.com
+    IdentityFile ~/.ssh/profile_0_id_rsa
+    User remoteusername
+
+Host gitlab-1.com
+    HostName gitlab.com
+    IdentityFile ~/.ssh/profile_1_id_rsa
+    User remoteusername
+
+Host gitlab-2.com
+    HostName gitlab.com
+    IdentityFile ~/.ssh/profile_2_id_rsa
+    User remoteusername
+
+Host gitlab-3.com
+    HostName gitlab.com
+    IdentityFile ~/.ssh/profile_3_id_rsa
+    User remoteusername
+

@@ -1,0 +1,9 @@
+/scripts/
+**/internal_*
+
+{{ if not (eq .chezmoi.os "darwin") -}}
+Library/
+{{ else if not (eq .chezmoi.os "linux") -}}
+.config/Code/
+{{ end -}}
+

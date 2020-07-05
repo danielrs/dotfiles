@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+set -e -u
+source '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Ansible..."
+
+# if command -v ansible &>/dev/null; then
+#     echo "Ansible already installed"
+#     exit 0
+# fi
+
+if ! command -v pip &>/dev/null; then
+    echo "pip not found"
+    exit 1
+fi
+
+pip install --upgrade ansible
+

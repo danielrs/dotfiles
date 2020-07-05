@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# ~/.zaliases
+#
+
+# Source common aliases
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
+
