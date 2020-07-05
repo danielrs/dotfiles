@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 
+# see: https://stackoverflow.com/a/20434740
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+
 PREFIX=$HOME/.local/bin
 CHEZMOI="$PREFIX/chezmoi"
 BINDIR="$PREFIX" curl -sfL https://git.io/chezmoi | sh
-$CHEZMOI apply
+$CHEZMOI apply --source "$DIR"
 
