@@ -1,0 +1,25 @@
+{
+    "editor.fontFamily": "'Source Code Pro Medium', 'Droid Sans Mono', monospace",
+    "editor.fontSize": 14,
+    "files.trimTrailingWhitespace": true,
+    "telemetry.enableTelemetry": false,
+    "window.zoomLevel": -0.5,
+
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+
+    "[nim]": {
+        "editor.tabSize": 2
+    },
+
+    "[yaml]": {
+        "editor.tabSize": 2
+    },
+
+    "go.formatTool": "goimports",
+    "go.goroot": "~/.golang",
+    "go.gopath": "~/Development/go",
+    "go.useLanguageServer": true
+}
+
