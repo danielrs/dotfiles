@@ -1,5 +1,5 @@
 [chezmoi]: https://github.com/twpayne/chezmoi
-[dotfiles-dotbot]:
+[dotfiles-dotbot]: https://github.com/danielrs/dotfiles-dotbot
 
 Personal dotfiles managed with [Chezmoi][chezmoi].
 
