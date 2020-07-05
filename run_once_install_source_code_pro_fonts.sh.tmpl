@@ -1,11 +1,12 @@
 #!/usr/bin/env sh
+# see: https://gist.github.com/enzinier/8d00d3f37d2e23985dcfa65662d163fa
 
 set -e -u
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Source Code Pro fonts..."
 
-REPO_URL="https://github.com/adobe-fonts/source-code-pro.git"
-CLONE="./source-code-pro"
+REPO_URL='https://github.com/adobe-fonts/source-code-pro.git'
+CLONE='./source-code-pro'
 
 # Detect system
 
@@ -33,4 +34,9 @@ find "$PREFIX" -iname "*.woff" -type f -maxdepth 1 -delete
 find "$PREFIX" -iname "*.woff2" -type f -maxdepth 1 -delete
 cp -r "$CLONE/OTF/." "$PREFIX"
 rm -rf "$CLONE"
+
+if command -v fc-cache 1>/dev/null 2>&1; then
+    echo "Updating font cache..."
+    fc-cache -f -v "$PREFIX"
+fi
 
