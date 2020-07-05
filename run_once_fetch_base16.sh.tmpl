@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 set -e -u
-source '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Fetching base16-shell..."
 
 DEST="$HOME/.config/base16-shell"

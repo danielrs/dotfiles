@@ -1,15 +1,15 @@
 #!/usr/bin/env sh
 
 set -e -u
-source '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Ansible..."
 
-# if command -v ansible &>/dev/null; then
+# if command -v ansible 1>/dev/null 2>&1; then
 #     echo "Ansible already installed"
 #     exit 0
 # fi
 
-if ! command -v pip &>/dev/null; then
+if ! command -v pip 1>/dev/null 2>&1; then
     echo "pip not found"
     exit 1
 fi

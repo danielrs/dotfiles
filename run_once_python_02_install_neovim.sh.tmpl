@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 set -e -u
-source '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Python Neovim..."
 
-if ! command -v pip &>/dev/null; then
+if ! command -v pip 1>/dev/null 2>&1; then
     echo "pip not found"
     exit 1
 fi

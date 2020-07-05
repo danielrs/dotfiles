@@ -3,7 +3,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 
 set -e -u
-source '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Homebrew..."
 
 # Skip if not on Darwin or already installed
