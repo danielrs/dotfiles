@@ -38,6 +38,7 @@ prepend_to_path "$N_PREFIX/bin"
 prepend_to_path "$GOROOT/bin"
 prepend_to_path "$GOPATH/bin"
 prepend_to_path "$HOME/.miniconda3/bin"
+prepend_to_path "$HOME/.poetry/bin"
 prepend_to_path "$HOME/.nimble/bin"
 
 # --------------------------------
