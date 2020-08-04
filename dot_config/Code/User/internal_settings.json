@@ -20,6 +20,8 @@
     "go.formatTool": "goimports",
     "go.goroot": "~/.golang",
     "go.gopath": "~/Development/go",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+
+    "python.venvPath": "~/.cache/pypoetry/virtualenvs"
 }
 
