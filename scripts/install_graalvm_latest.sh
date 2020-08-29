@@ -36,6 +36,6 @@ mkdir -p "$PREFIX"
 tar -xzf "$ARCHIVE" --strip-components 1 -C "$PREFIX"
 rm "$ARCHIVE"
 
-echo "Remember to run \`xattr -r -d com.apple.quarantime $PREFIX\`"
+echo "Remember to run \`xattr -r -d com.apple.quarantine $PREFIX\`"
 echo "see: https://github.com/oracle/graal/issues/1724#issuecomment-539503007"
 
