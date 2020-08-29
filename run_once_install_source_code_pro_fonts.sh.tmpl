@@ -5,10 +5,7 @@ set -e -u
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Source Code Pro fonts..."
 
-REPO_URL='https://github.com/adobe-fonts/source-code-pro.git'
-CLONE='./source-code-pro'
-
-# Detect system
+# detect system
 
 if [ `uname` = Darwin ]; then
     PREFIX="$HOME/Library/Fonts/adobe-fonts/source-code-pro"
@@ -17,11 +14,14 @@ elif [ `uname` = Linux ]; then
     PREFIX="$HOME/.loca/share/fonts/adobe-fonts/source-code-pro"
 
 else
-    echo "Unable to detect system"
+    echo "unable to detect system"
     exit 1
 fi
 
-# Download and install
+# download and install
+
+REPO_URL='https://github.com/adobe-fonts/source-code-pro.git'
+CLONE='./source-code-pro'
 
 echo "Cloning repository..."
 git clone --branch release --depth 1 "$REPO_URL" "$CLONE"

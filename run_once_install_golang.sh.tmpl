@@ -4,15 +4,14 @@ set -e -u
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Golang..."
 
-ARCHIVE="./golang.tar.gz"
 PREFIX="$HOME/.golang"
 
-# Get latest golang version
-# See: https://stackoverflow.com/a/57725365
+# get latest golang version
+# see: https://stackoverflow.com/a/57725365
 
 VERSION=`curl -fsSL https://golang.org/VERSION?m=text`
 
-# Detect system
+# detect system
 
 if [ `uname` = Darwin ]; then
     GOLANG_URL="https://golang.org/dl/$VERSION.darwin-amd64.tar.gz"
@@ -21,11 +20,13 @@ elif [ `uname` = Linux ]; then
     GOLANG_URL="https://golang.org/dl/$VERSION.linux-amd64.tar.gz"
 
 else
-    echo "Unable to detect system"
+    echo "unable to detect system"
     exit 1
 fi
 
-# Download and install
+# download and install
+
+ARCHIVE="./golang.tar.gz"
 
 echo "Downloading Go ($VERSION)..."
 curl -fsSL "$GOLANG_URL" -o "$ARCHIVE"

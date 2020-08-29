@@ -9,7 +9,7 @@ runtitle "Installing Homebrew..."
 # Skip if not on Darwin or already installed
 
 if [ ! `uname` = Darwin ]; then
-    echo "Not a Darwin system"
+    echo "not a Darwin system"
     exit 1
 fi
 
@@ -18,7 +18,7 @@ if command -v brew 1>/dev/null 2>&1; then
     exit 0
 fi
 
-# Download and install silently
+# download and install silently
 
 HOMEBREW_URL='https://raw.githubusercontent.com/Homebrew/install/master/install.sh'
 INSTALLER="./homebrew-installer.sh"
