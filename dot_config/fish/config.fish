@@ -13,6 +13,10 @@ set -x GOPATH "$HOME/Development/go"
 # n (node version manager)
 set -x N_PREFIX "$HOME/.n"
 
+# Java home
+
+set -x JAVA_HOME "$HOME/.graalvm/Contents/Home"
+
 # Android SDK home
 set -x ANDROID_HOME "$HOME/.android-sdk"
 
@@ -34,6 +38,7 @@ prepend_to_path "/usr/local/opt/python/libexec/bin"
 prepend_to_path "$HOME/.local/bin"
 prepend_to_path "$HOME/.cabal/bin"
 prepend_to_path "$HOME/.cargo/bin"
+prepend_to_path "$HOME/.graalvm/Contents/Home/bin"
 prepend_to_path "$N_PREFIX/bin"
 prepend_to_path "$GOROOT/bin"
 prepend_to_path "$GOPATH/bin"
