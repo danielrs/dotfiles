@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# JAVA_SHORT="${JAVA_SHORT:-java11}"
+JAVA_SHORT="${JAVA_SHORT:-java8}"
+
 set -e -u -o pipefail
 
 PREFIX="$HOME/.graalvm"
@@ -13,10 +16,10 @@ VERSION="$(curl -fsSL "$URL" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 # detect system
 
 if [ $(uname) = Darwin ]; then
-    GRAALVM_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$VERSION/graalvm-ce-java11-darwin-amd64-$VERSION.tar.gz"
+    GRAALVM_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$VERSION/graalvm-ce-$JAVA_SHORT-darwin-amd64-$VERSION.tar.gz"
 
 elif [ $(uname) = Linux ]; then
-    GRAALVM_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$VERSION/graalvm-ce-java11-linux-amd64-$VERSION.tar.gz"
+    GRAALVM_URL="https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$VERSION/graalvm-ce-$JAVA_SHORT-linux-amd64-$VERSION.tar.gz"
 
 else
     echo "unable to detect system"
@@ -27,7 +30,7 @@ fi
 
 ARCHIVE="./graalvm.tar.gz"
 
-echo "Downloading GraalVM ($VERSION)..."
+echo "Downloading GraalVM ($JAVA_SHORT - $VERSION)..."
 curl -fL "$GRAALVM_URL" -o "$ARCHIVE"
 
 echo "Extracting archive..."
