@@ -3,6 +3,11 @@ Host github.com
     IdentityFile ~/.ssh/id_rsa
     User remoteusername
 
+Host github-uh.com
+    HostName github.com
+    IdentityFile ~/.ssh/uh_id_rsa
+    User remoteusername
+
 Host bitbucket.org
     HostName bitbucket.org
     IdentityFile ~/.ssh/bitbucket_id_rsa
