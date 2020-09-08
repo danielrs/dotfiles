@@ -3,7 +3,7 @@ Host github.com
     IdentityFile ~/.ssh/id_rsa
     User remoteusername
 
-Host github-uh.com
+Host github.com-uh
     HostName github.com
     IdentityFile ~/.ssh/uh_id_rsa
     User remoteusername
@@ -13,12 +13,12 @@ Host bitbucket.org
     IdentityFile ~/.ssh/bitbucket_id_rsa
     User remoteusername
 
-Host bitbucket-clearblade.org
+Host bitbucket.org-clearblade
     HostName bitbucket.org
     IdentityFile ~/.ssh/clearblade_id_rsa
     User remoteusername
 
-Host bitbucket-deepcast.org
+Host bitbucket.org-deepcast
     HostName bitbucket.org
     IdentityFile ~/.ssh/deepcast_id_rsa
     User remoteusername
@@ -30,66 +30,66 @@ Host gitlab.com
 
 # GitHub profiles
 
-Host github-0.com
+Host github.com-0
     HostName github.com
     IdentityFile ~/.ssh/profile_0_id_rsa
     User remoteusername
 
-Host github-1.com
+Host github.com-1
     HostName github.com
     IdentityFile ~/.ssh/profile_1_id_rsa
     User remoteusername
 
-Host github-2.com
+Host github.com-2
     HostName github.com
     IdentityFile ~/.ssh/profile_2_id_rsa
     User remoteusername
 
-Host github-3.com
+Host github.com-3
     HostName github.com
     IdentityFile ~/.ssh/profile_3_id_rsa
     User remoteusername
 
 # Bitbucket profiles
 
-Host bitbucket-0.org
+Host bitbucket.org-0
     HostName bitbucket.org
     IdentityFile ~/.ssh/profile_0_id_rsa
     User remoteusername
 
-Host bitbucket-1.org
+Host bitbucket.org-1
     HostName bitbucket.org
     IdentityFile ~/.ssh/profile_1_id_rsa
     User remoteusername
 
-Host bitbucket-2.org
+Host bitbucket.org-2
     HostName bitbucket.org
     IdentityFile ~/.ssh/profile_2_id_rsa
     User remoteusername
 
-Host bitbucket-3.org
+Host bitbucket.org-3
     HostName bitbucket.org
     IdentityFile ~/.ssh/profile_3_id_rsa
     User remoteusername
 
 # GitLab profiles
 
-Host gitlab-0.com
+Host gitlab.com-0
     HostName gitlab.com
     IdentityFile ~/.ssh/profile_0_id_rsa
     User remoteusername
 
-Host gitlab-1.com
+Host gitlab.com-1
     HostName gitlab.com
     IdentityFile ~/.ssh/profile_1_id_rsa
     User remoteusername
 
-Host gitlab-2.com
+Host gitlab.com-2
     HostName gitlab.com
     IdentityFile ~/.ssh/profile_2_id_rsa
     User remoteusername
 
-Host gitlab-3.com
+Host gitlab.com-3
     HostName gitlab.com
     IdentityFile ~/.ssh/profile_3_id_rsa
     User remoteusername
