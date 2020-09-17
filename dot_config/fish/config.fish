@@ -2,9 +2,6 @@
 # Exports
 # --------------------------------
 
-# Term variable for better compatibility
-set -x TERM "xterm-256color"
-
 # Default terminal text-editor to use
 set -x VISUAL "nvim"
 # set -x EDITOR "nvim"
