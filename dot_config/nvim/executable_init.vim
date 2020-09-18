@@ -225,6 +225,7 @@ map <F8> :TagbarToggle<CR>
 " vim-elixir
 " vim-go
 " vim-javascript
+" vim-jsonnet
 
 " vim-less
 " vim-python-pep8-indent'
