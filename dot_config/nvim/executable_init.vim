@@ -157,7 +157,7 @@ Plug 'groenewege/vim-less'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 
 if has('nvim')
   Plug 'zchee/deoplete-go'
