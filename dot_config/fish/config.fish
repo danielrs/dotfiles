@@ -14,7 +14,6 @@ set -x GOPATH "$HOME/Development/go"
 set -x N_PREFIX "$HOME/.n"
 
 # Java home
-
 set -x JAVA_HOME "$HOME/.graalvm/Contents/Home"
 
 # Android SDK home
@@ -45,8 +44,8 @@ prepend_to_path "$GOPATH/bin"
 prepend_to_path "$HOME/.miniconda3/bin"
 prepend_to_path "$HOME/.poetry/bin"
 prepend_to_path "$HOME/.nimble/bin"
-prepend_to_path "$HOME/.haxe"
-prepend_to_path "$HOME/.nekovm"
+prepend_to_path "$HOME/.android-sdk/cmdline-tools/latest/bin"
+prepend_to_path "$HOME/.flutter/bin"
 
 # --------------------------------
 # Other
