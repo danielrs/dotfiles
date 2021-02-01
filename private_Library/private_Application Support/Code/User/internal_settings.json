@@ -5,6 +5,17 @@
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Solarized Light",
 
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [80],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+
     "[javascript]": {
         "editor.tabSize": 2
     },
@@ -17,10 +28,10 @@
         "editor.tabSize": 2
     },
 
+    "dart.previewLsp": true,
+
     "go.formatTool": "goimports",
     "go.goroot": "~/.golang",
     "go.gopath": "~/Development/go",
-    "go.useLanguageServer": true,
-
-    "python.venvPath": "~/Library/Caches/pypoetry/virtualenvs"
+    "go.useLanguageServer": true
 }
