@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-JAVA_SHORT="${JAVA_SHORT:-java11}"
-# JAVA_SHORT="${JAVA_SHORT:-java8}"
+# JAVA_SHORT="${JAVA_SHORT:-java11}"
+JAVA_SHORT="${JAVA_SHORT:-java8}"
 
 set -e -u -o pipefail
 

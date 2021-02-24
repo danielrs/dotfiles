@@ -28,6 +28,8 @@
         "editor.tabSize": 2
     },
 
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
     "dart.previewLsp": true,
 
     "go.formatTool": "goimports",
