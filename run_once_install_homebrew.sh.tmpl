@@ -6,9 +6,9 @@ set -e -u
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Homebrew..."
 
-# Skip if not on Darwin or already installed
+# skip if not on Darwin or already installed
 
-if [ ! `uname` = Darwin ]; then
+if [ ! "$(uname)" = Darwin ]; then
     echo "not a Darwin system"
     exit 1
 fi
@@ -27,7 +27,8 @@ echo "Downloading Homebrew (latest)..."
 curl -fsSL "$HOMEBREW_URL" -o "$INSTALLER"
 
 echo "Installing..."
-CI=1 bash "$INSTALLER"
+chmod +x "$INSTALLER"
+CI=1 "$INSTALLER"
 rm "$INSTALLER"
 
 {{ end -}}

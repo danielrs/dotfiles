@@ -7,11 +7,11 @@ runtitle "Installing Source Code Pro fonts..."
 
 # detect system
 
-if [ `uname` = Darwin ]; then
+if [ "$(uname)" = Darwin ]; then
     PREFIX="$HOME/Library/Fonts/adobe-fonts/source-code-pro"
 
-elif [ `uname` = Linux ]; then
-    PREFIX="$HOME/.loca/share/fonts/adobe-fonts/source-code-pro"
+elif [ "$(uname)" = Linux ]; then
+    PREFIX="$HOME/.local/share/fonts/adobe-fonts/source-code-pro"
 
 else
     echo "unable to detect system"
