@@ -24,6 +24,6 @@ cd .dotfiles && ./install
 
 Follow your system-specific instructions:
 
-- [macOS](README.macos.md)
+- [macOS](README.darwin.md)
 - [Linux](README.linux.md)
 
