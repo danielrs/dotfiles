@@ -1,6 +1,6 @@
 /install
 /LICENSE
-/README.md
+/README*.md
 
 /scripts/
 **/internal_*

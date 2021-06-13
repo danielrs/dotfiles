@@ -8,3 +8,16 @@ For my previous dotfiles check [dotfiles-dotbot][dotfiles-dotbot].
 
 For some conventions on file hierarchy [read here][systemd-file-hierarchy].
 
+## After fresh install
+
+Install this dotfiles:
+
+```
+cd .dotfiles && ./install
+```
+
+And follow your system-specific instructions:
+
+- [macOS][README.macos.md]
+- [Linux][README.linux.md]
+
