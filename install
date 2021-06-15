@@ -4,7 +4,6 @@ set -e -u
 
 # see: https://stackoverflow.com/a/20434740
 DIR="$( cd "$( dirname "$0" )" && pwd )"
-
 BINDIR=$HOME/.local/bin
 CHEZMOI="$BINDIR/chezmoi"
 
@@ -12,6 +11,5 @@ export BINDIR
 curl -sfL https://git.io/chezmoi | sh
 
 chmod 700 "$DIR"
-rm -f "$HOME/.config/chezmoi/chezmoi.toml"
 "$CHEZMOI" apply --source "$DIR"
 
