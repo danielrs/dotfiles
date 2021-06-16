@@ -33,7 +33,11 @@ chsh -s /usr/loca/bin/fish
 
 - Set brightness to desired level
 
-#### Preferred keyboard shortcuts
+#### Keyboard settings
+
+- Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Add period with double-space*
+
+#### Keyboard shortcuts
 
 Go to *System Preferences* -> *Keyboard* -> *Shortcuts*:
 
