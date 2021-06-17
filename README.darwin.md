@@ -51,6 +51,10 @@ Go to *System Preferences* -> *Keyboard* -> *Customize Control Strip*:
 
 - Replace Siri icon with Spotlight
 
+#### Mission control
+
+- Uncheck *System Preferences* -> *Mission Control* -> *Automatically rearrange Spaces based on most recent use*
+
 #### Add more desktops
 
 Swipe three fingers up on the touchpad and add more desktops.
