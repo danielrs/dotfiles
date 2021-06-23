@@ -1,4 +1,10 @@
 
+### Opt out of Homebrew analytics
+
+```
+brew analytics off
+```
+
 ### Install CLI tools
 
 ```
