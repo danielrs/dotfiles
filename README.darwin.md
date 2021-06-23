@@ -8,7 +8,7 @@ brew install fish ripgrep neovim
 ### Install cask apps
 
 ```
-brew install --cask firefox kitty visual-studio-code spotify
+brew install --cask rectangle firefox kitty visual-studio-code spotify
 ```
 
 ### Fish shell
@@ -33,7 +33,13 @@ chsh -s /usr/loca/bin/fish
 
 - Set brightness to desired level
 
-#### Keyboard settings
+#### Touch Bar
+
+Go to *System Preferences* -> *Keyboard* -> *Customize Control Strip*:
+
+- Replace Siri icon with Spotlight
+
+#### Keyboard text settings
 
 - Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Add period with double-space*
 
@@ -45,17 +51,14 @@ Go to *System Preferences* -> *Keyboard* -> *Shortcuts*:
 
 - *Mission Control* -> *Move right a space*: `^]`
 
-#### Touch Bar
-
-Go to *System Preferences* -> *Keyboard* -> *Customize Control Strip*:
-
-- Replace Siri icon with Spotlight
 
 #### Mission control
 
 - Uncheck *System Preferences* -> *Mission Control* -> *Automatically rearrange Spaces based on most recent use*
 
-#### Add more desktops
+#### Desktop Add more desktops
 
-Swipe three fingers up on the touchpad and add more desktops.
+- Set preferred background
+
+- Swipe three fingers up on the touchpad and add more desktops
 
