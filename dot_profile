@@ -71,6 +71,10 @@ export PATH
 
 export N_PREFIX="$HOME/.n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
+if command -v fnm; then
+    eval "$(fnm env)"
+fi
+
 #export SDKMAN_DIR="/home/danielrs/.sdkman"
 #[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && . "$SDKMAN_DIR/bin/sdkman-init.sh"
 
