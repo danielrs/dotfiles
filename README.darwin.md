@@ -22,7 +22,7 @@ brew install --cask rectangle firefox kitty visual-studio-code spotify
 Add `/usr/local/bin/fish` to `/etc/shells`, and then run:
 
 ```
-chsh -s /usr/loca/bin/fish
+chsh -s /usr/local/bin/fish
 ```
 
 ### System preferences
@@ -46,6 +46,8 @@ Go to *System Preferences* -> *Keyboard* -> *Customize Control Strip*:
 - Replace Siri icon with Spotlight
 
 #### Keyboard text settings
+
+- Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Capitalize words automatically*
 
 - Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Add period with double-space*
 
