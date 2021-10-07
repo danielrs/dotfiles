@@ -51,6 +51,8 @@ Go to *System Preferences* -> *Keyboard* -> *Customize Control Strip*:
 
 - Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Add period with double-space*
 
+- Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Touch Bar typing suggestions*
+
 #### Keyboard shortcuts
 
 Go to *System Preferences* -> *Keyboard* -> *Shortcuts*:
