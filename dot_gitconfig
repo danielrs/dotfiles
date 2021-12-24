@@ -2,6 +2,9 @@
     name = Daniel Rivas
     email = 1887507+danielrs@users.noreply.github.com
 
+[init]
+    defaultBranch = main
+
 [core]
     autocrlf = input
     ignorecase = false
