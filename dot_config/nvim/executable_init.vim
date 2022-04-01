@@ -150,7 +150,7 @@ Plug 'tpope/vim-commentary'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'elixir-lang/vim-elixir'
 Plug 'dag/vim-fish'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
 Plug 'google/vim-jsonnet'
 Plug 'groenewege/vim-less'
@@ -160,7 +160,6 @@ Plug 'tpope/vim-surround'
 " Plug 'lervag/vimtex'
 
 if has('nvim')
-  Plug 'zchee/deoplete-go'
   Plug 'zchee/deoplete-jedi'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -236,15 +235,12 @@ map <F8> :TagbarToggle<CR>
 " Neovim plugins
 " ----------------
 
-"deoplete-go
-let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-
 "deoplete-jedi
 let g:deoplete#sources#jedi#extra_path = [getcwd()] "add current dir to python path
 
 "deoplete.nvim
 let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Vim plugins
