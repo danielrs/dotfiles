@@ -7,9 +7,11 @@ DIR="$( cd "$( dirname "$0" )" && pwd )"
 BINDIR=$HOME/.local/bin
 CHEZMOI="$BINDIR/chezmoi"
 
+# install chezmoi into BINDIR
 export BINDIR
-curl -sfL https://git.io/chezmoi | sh
+curl -fsSL "https://chezmoi.io/get" | sh
 
+# apply dotfiles
 chmod 700 "$DIR"
 "$CHEZMOI" apply --source "$DIR"
 
