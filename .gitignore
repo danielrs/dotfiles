@@ -569,4 +569,4 @@ $RECYCLE.BIN/
 ### CUSTOM ###
 
 dot_config/nvim/autoload/plug.vim
-
+!dot_local/bin
