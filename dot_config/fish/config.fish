@@ -34,7 +34,6 @@ set -x CLICOLOR 1
 prepend_to_path "/usr/local/sbin"
 prepend_to_path "/usr/local/bin"
 prepend_to_path "/usr/local/opt/python/libexec/bin"
-prepend_to_path "$HOME/.local/bin"
 prepend_to_path "$HOME/.cabal/bin"
 prepend_to_path "$HOME/.cargo/bin"
 prepend_to_path "$HOME/.graalvm/Contents/Home/bin"
@@ -46,6 +45,7 @@ prepend_to_path "$HOME/.poetry/bin"
 prepend_to_path "$HOME/.nimble/bin"
 prepend_to_path "$HOME/.android-sdk/cmdline-tools/latest/bin"
 prepend_to_path "$HOME/.flutter/bin"
+prepend_to_path "$HOME/.local/bin"
 
 # --------------------------------
 # Other
