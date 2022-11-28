@@ -57,9 +57,9 @@ Go to *System Preferences* -> *Keyboard* -> *Customize Control Strip*:
 
 Go to *System Preferences* -> *Keyboard* -> *Shortcuts*:
 
-- *Mission Control* -> *Move left a space*: `^[`
+- *Mission Control* -> *Move left a space*: `Ctrl+[`
 
-- *Mission Control* -> *Move right a space*: `^]`
+- *Mission Control* -> *Move right a space*: `Ctrl+]`
 
 
 #### Mission control
