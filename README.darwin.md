@@ -8,7 +8,7 @@ brew analytics off
 ### Install CLI tools
 
 ```
-brew install fish ripgrep jq neovim
+brew install fish ripgrep jq navi neovim
 ```
 
 ### Install cask apps
