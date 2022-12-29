@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Uses gtail if available (from coreutils in macOS), otherwise uses tail
+gtail "$@"
+ret=$?
+if [ "$ret" = 127 ]; then
+    tail "$@"
+    ret=$?
+fi
+exit $ret

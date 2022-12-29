@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Uses ghead if available (from coreutils in macOS), otherwise uses head
+ghead "$@"
+ret=$?
+if [ "$ret" = 127 ]; then
+    head "$@"
+    ret=$?
+fi
+exit $ret
