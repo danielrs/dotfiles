@@ -1,32 +1,6 @@
+
+# Include everything under the config.d folder
+# NOTE: useful for external ad-hoc configuration that we don't
+# want to include in the repository
+
 Include config.d/*
-
-Host github.com
-    HostName github.com
-    IdentityFile ~/.ssh/id_rsa
-    User remoteusername
-
-Host github.com-uh
-    HostName github.com
-    IdentityFile ~/.ssh/uh_id_rsa
-    User remoteusername
-
-Host bitbucket.org
-    HostName bitbucket.org
-    IdentityFile ~/.ssh/bitbucket_id_rsa
-    User remoteusername
-
-Host bitbucket.org-clearblade
-    HostName bitbucket.org
-    IdentityFile ~/.ssh/clearblade_id_rsa
-    User remoteusername
-
-Host bitbucket.org-deepcast
-    HostName bitbucket.org
-    IdentityFile ~/.ssh/deepcast_id_rsa
-    User remoteusername
-
-Host gitlab.com
-    HostName gitlab.com
-    IdentityFile ~/.ssh/gitlab_id_rsa
-    User remoteusername
-
