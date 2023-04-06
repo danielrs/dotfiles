@@ -2,26 +2,9 @@
 " Setting up vimdir
 " ----------------
 
-let vimdir = '$HOME/.config/nvim'
-if !has("nvim") && !has("win32")
-  let vimdir = '$HOME/.vim'
-elseif has("nvim") && has("win32")
-  let vimdir = '$HOME/AppData/Local/nvim'
-elseif !has("nvim") && has("win32")
+let vimdir = '$HOME/.vim'
+if has("win32")
   let vimdir = '$HOME/vimfiles'
-endif
-
-" ----------------
-" GVim configuration
-" ----------------
-
-if !has('nvim') && has('gui_running')
-  "set guifont=Consolas:h12
-  set guifont=Source\ Code\ Pro\ 12
-  set guioptions-=m "remove menu
-  set guioptions-=T "remove toolbar
-  set guioptions-=r "remove right scroll bar
-  set guioptions-=L "remove left scroll bar
 endif
 
 " ----------------
@@ -41,11 +24,6 @@ set number
 set cursorline
 set showcmd
 set scrolloff=4 " Always n lines visible when scrolling
-
-" nvim/vim mismatch of esc keys
-if !has('nvim')
-  set noesckeys " Disable Esc-key escape sequences
-endif
 
 " relative numbers
 nnoremap <silent> <A-n> :set relativenumber! relativenumber?<CR>
@@ -133,47 +111,33 @@ autocmd Syntax jflex so $VIM/vimfiles/syntax/jflex.vim
 " ----------------
 
 " to sort plugins use :sort/.*\//
-call plug#begin('~/.config/nvim/plugged')
-
+call plug#begin('~/.vim/plugged')
 Plug 'rking/ag.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'mattn/emmet-vim'
-Plug 'neovimhaskell/haskell-vim'
 Plug 'othree/html5.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'godlygeek/tabular'
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'elixir-lang/vim-elixir'
 Plug 'dag/vim-fish'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'pangloss/vim-javascript'
 Plug 'google/vim-jsonnet'
 Plug 'groenewege/vim-less'
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
-" Plug 'lervag/vimtex'
-
-if has('nvim')
-  Plug 'zchee/deoplete-jedi'
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 call plug#end()
 
-" Neovim and Vim plugins
+" Vim plugins
 " ----------------
 
 " ag.vim
+" TODO
 
 " base16-vim
 set background=light
@@ -191,8 +155,8 @@ hi NonText ctermbg=none
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,eelixir EmmetInstall
 
-" haskell-vim
 " html5.vim
+" TODO
 
 " lightline.vim
 let g:lightline = { 'colorscheme': 'solarized' }
@@ -217,36 +181,31 @@ augroup END
 let g:rustfmt_autosave = 1
 
 " tabular
-
-" tagbar
-map <F8> :TagbarToggle<CR>
+" TODO
 
 " vim-commentary
+" TODO
+
 " vim-cpp-enhanced-highlight
+" TODO
+
 " vim-elixir
-" vim-go
+" TODO
+
 " vim-javascript
+" TODO
+
 " vim-jsonnet
+" TODO
 
 " vim-less
+" TODO
+
 " vim-python-pep8-indent'
+" TODO
+
 " vim-sleuth
+" TODO
+
 " vim-surround
-" vimtex
-
-" Neovim plugins
-" ----------------
-
-"deoplete-jedi
-let g:deoplete#sources#jedi#extra_path = [getcwd()] "add current dir to python path
-
-"deoplete.nvim
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
-" Vim plugins
-" ----------------
-
-"neocomplete.vim
-let g:neocomplete#enable_at_startup = 1
+" TODO
