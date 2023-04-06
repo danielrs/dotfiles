@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# see: https://nvchad.com/docs/quickstart/install
+
+set -e -u
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing NvChad..."
+
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
