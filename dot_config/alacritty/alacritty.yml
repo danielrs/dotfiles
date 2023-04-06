@@ -17,6 +17,8 @@ window:
     y: 0
 
   decorations: full
+  opacity: 0.98
+  option_as_alt: Both # for macOS
 
 scrolling:
   history: 10000
@@ -28,28 +30,34 @@ scrolling:
 font:
   size: 14.0
 
+  offset:
+    x: 1 # spacing looks nicer, similar to other terminals
+    y: 0
+
   normal:
-    family: Source Code Pro
-    style: Regular
+    family: SauceCodePro Nerd Font
+    style: Medium
 
   bold:
-    family: Source Code Pro
+    family: SauceCodePro Nerd Font
     style: Semibold
 
   italic:
-    family: Source Code Pro
-    style: Italic
+    family: SauceCodePro Nerd Font
+    style: Medium Italic
 
-# Background opacity
-# ----------------
+  bold_italic:
+    family: SauceCodePro Nerd Font
+    style: Semibold Italic
 
-background_opacity: 0.98
 
 # Cursor
 # ----------------
 
 cursor:
-  style: Block
+  style:
+    shape: Block
+    blinking: On
   unfocused_follow: true
 
 # Mouse bindings
@@ -62,35 +70,6 @@ mouse_bindings:
 # ----------------
 
 key_bindings:
-  - { key: Key0,   mods: Command,         action: ResetFontSize    }
-  - { key: Equals, mods: Command,         action: IncreaseFontSize }
-  - { key: Add,    mods: Command,         action: IncreaseFontSize }
-  - { key: Minus,  mods: Command,         action: DecreaseFontSize }
-  - { key: K,      mods: Command,         action: ClearHistory     }
-  - { key: K,      mods: Command,         chars: "\x0c"            }
-  - { key: V,      mods: Command,         action: Paste            }
-  - { key: C,      mods: Command,         action: Copy             }
-  - { key: H,      mods: Command,         action: Hide             }
-  - { key: Q,      mods: Command,         action: Quit             }
-  - { key: W,      mods: Command,         action: Quit             }
-  - { key: F,      mods: Command|Control, action: ToggleFullscreen }
-
-  - { key: Paste,                    action: Paste                            }
-  - { key: Copy,                     action: Copy                             }
-  - { key: L,         mods: Control, action: ClearLogNotice                   }
-  - { key: L,         mods: Control, chars: "\x0c"                            }
-  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
-  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
-  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
-  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
-
-  # Enables option as meta key.
-  # see: https://github.com/jwilm/alacritty/issues/93#issuecomment-429651216
-  - { key: J,   mods: Alt,  chars: "\x1bj" }
-  - { key: K,   mods: Alt,  chars: "\x1bk" }
-  - { key: H,   mods: Alt,  chars: "\x1bh" }
-  - { key: L,   mods: Alt,  chars: "\x1bl" }
-
   # Spawns new alacritty instance.
   # see: https://github.com/jwilm/alacritty/issues/2607#issuecomment-509923403
   - { key: N,   mods: Command,  action: SpawnNewInstance }
@@ -103,7 +82,6 @@ key_bindings:
 # Base16 Solarized Light 256 - alacritty color config
 # Ethan Schoonover (modified by aramisgithub)
 colors:
-
   # Default colors
   primary:
     background: '0xfdf6e3'

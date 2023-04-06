@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "SourceCodePro-medium, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "SauceCodeProNerdFontComplete-Medium,SourceCodePro-medium, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 14,
     "files.trimTrailingWhitespace": true,
     "telemetry.enableTelemetry": false,
