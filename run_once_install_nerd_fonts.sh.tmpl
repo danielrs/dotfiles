@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+# see: https://gist.github.com/enzinier/8d00d3f37d2e23985dcfa65662d163fa
+
+set -e -u
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Nerd Fonts..."
+
+# detect system
+
+if [ "$(uname)" = Darwin ]; then
+    PREFIX="$HOME/Library/Fonts/nerd-fonts"
+
+elif [ "$(uname)" = Linux ]; then
+    PREFIX="$HOME/.local/share/fonts/nerd-fonts"
+
+else
+    echo "unable to detect system"
+    exit 1
+fi
+
+# cleanup prefix
+
+rm -rf "$PREFIX"
+
+# download and install fonts
+
+BASE_URL='https://github.com/ryanoasis/nerd-fonts/releases/latest/download'
+
+install_nerd_font() {
+  local zipname="$1"
+  local dirname="${zipname%.*}"
+  curl -fSL "$BASE_URL/$zipname" -O
+  mkdir -p "$PREFIX/$dirname"
+  unzip -q "./$zipname" -d "$PREFIX/$dirname"
+  rm "./$zipname"
+}
+
+install_nerd_font "SourceCodePro.zip"
+install_nerd_font "JetBrainsMono.zip"
