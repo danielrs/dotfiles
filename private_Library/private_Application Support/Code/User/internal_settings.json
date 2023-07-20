@@ -5,6 +5,42 @@
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Solarized Light",
 
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "x"],
+        "commands": ["workbench.action.closeActiveEditor"],
+      },
+      {
+        "before": ["<leader>", "X"],
+        "commands": ["workbench.action.closeOtherEditors"],
+      },
+      {
+        "before": ["<leader>", "f", "w"],
+        "commands": ["workbench.action.quickOpen"],
+      },
+      {
+        "before": ["<leader>", "f", "o"],
+        "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"],
+      },
+      {
+        "before": ["g", "r"],
+        "commands": ["editor.action.goToReferences"],
+      },
+      {
+        "before": ["g", "R"],
+        "commands": ["references-view.findReferences"],
+      },
+      {
+        "before": ["g", "i"],
+        "commands": ["editor.action.goToImplementation"],
+      },
+      {
+        "before": ["g", "I"],
+        "commands": ["references-view.findImplementations"],
+      },
+    ],
+
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,

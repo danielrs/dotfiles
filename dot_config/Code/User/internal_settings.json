@@ -5,6 +5,53 @@
     "telemetry.enableTelemetry": false,
     "window.zoomLevel": -0.5,
 
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+      {
+        "before": ["<leader>", "x"],
+        "commands": ["workbench.action.closeActiveEditor"],
+      },
+      {
+        "before": ["<leader>", "X"],
+        "commands": ["workbench.action.closeOtherEditors"],
+      },
+      {
+        "before": ["<leader>", "f", "w"],
+        "commands": ["workbench.action.quickOpen"],
+      },
+      {
+        "before": ["<leader>", "f", "o"],
+        "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"],
+      },
+      {
+        "before": ["g", "r"],
+        "commands": ["editor.action.goToReferences"],
+      },
+      {
+        "before": ["g", "R"],
+        "commands": ["references-view.findReferences"],
+      },
+      {
+        "before": ["g", "i"],
+        "commands": ["editor.action.goToImplementation"],
+      },
+      {
+        "before": ["g", "I"],
+        "commands": ["references-view.findImplementations"],
+      },
+    ],
+
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [80],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+
     "[javascript]": {
         "editor.tabSize": 2
     },
@@ -17,11 +64,13 @@
         "editor.tabSize": 2
     },
 
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "dart.previewLsp": true,
+
     "go.formatTool": "goimports",
     "go.goroot": "~/.golang",
     "go.gopath": "~/Development/go",
     "go.useLanguageServer": true,
-
-    "python.venvPath": "~/.cache/pypoetry/virtualenvs"
 }
 
