@@ -1,8 +1,9 @@
 {
-    "editor.fontFamily": "SauceCodeProNerdFontComplete-Medium,SourceCodePro-medium, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'SauceCodePro Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontWeight": "500",
     "editor.fontSize": 14,
     "files.trimTrailingWhitespace": true,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "workbench.colorTheme": "Solarized Light",
 
     "vim.leader": "<space>",
@@ -71,5 +72,5 @@
     "go.formatTool": "goimports",
     "go.goroot": "~/.golang",
     "go.gopath": "~/Development/go",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
 }

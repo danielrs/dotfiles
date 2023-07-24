@@ -1,9 +1,10 @@
 {
-    "editor.fontFamily": "'Source Code Pro Medium', 'Droid Sans Mono', monospace",
+    "editor.fontFamily": "'SauceCodePro Nerd Font', 'Droid Sans Mono', monospace",
+    "editor.fontWeight": "500",
     "editor.fontSize": 14,
     "files.trimTrailingWhitespace": true,
-    "telemetry.enableTelemetry": false,
-    "window.zoomLevel": -0.5,
+    "telemetry.telemetryLevel": "off",
+    "workbench.colorTheme": "Solarized Light",
 
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -73,4 +74,3 @@
     "go.gopath": "~/Development/go",
     "go.useLanguageServer": true,
 }
-
