@@ -9,6 +9,14 @@
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
       {
+        "before": ["Tab"],
+        "commands": ["workbench.action.nextEditor"],
+      },
+      {
+        "before": ["<S-Tab>"],
+        "commands": ["workbench.action.previousEditor"],
+      },
+      {
         "before": ["<leader>", "x"],
         "commands": ["workbench.action.closeActiveEditor"],
       },
