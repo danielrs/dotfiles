@@ -25,7 +25,7 @@
         "commands": ["workbench.action.closeOtherEditors"],
       },
       {
-        "before": ["<leader>", "f", "w"],
+        "before": ["<leader>", "f", "a"],
         "commands": ["workbench.action.quickOpen"],
       },
       {
