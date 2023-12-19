@@ -6,20 +6,17 @@ local M = {}
     load_on_startup = true,
   },
   statusline = {
-    overriden_modules = function()
-      local st_modules = require("nvchad_ui.statusline.default")
-      return {
-        cursor_position = function()
-          -- remove single trailing whitespace (if any)
-          local default = st_modules.cursor_position()
-          if default:sub(-1, -1) == " " then default = default:sub(1, -2) end
-          -- combine default with column information
-          local _, col = unpack(vim.api.nvim_win_get_cursor(0))
-          local col_str = string.format("%2s", col+1)
-          return default .. ", Col " .. col_str .. " "
-        end,
-      }
-    end
+    overriden_modules = function(modules)
+      -- See: https://nvchad.com/docs/config/nvchad_ui#override_statusline_modules
+      -- Override cursor position.
+      local cpos = modules[10]
+      modules[10] = (function()
+        -- Remove single trailing whitespace (if any).
+        if cpos:sub(-1, -1) == " " then cpos = cpos:sub(1, -2) end
+        -- Combine default with column information.
+        return cpos .. ", Col %c "
+      end)()
+    end,
   },
 }
 

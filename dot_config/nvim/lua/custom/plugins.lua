@@ -42,16 +42,17 @@ local plugins = {
     "hrsh7th/nvim-cmp",
     opts = {
       enabled = function()
-        -- keep command mode completion enabled when cursor is in a comment
+        -- See: https://github.com/hrsh7th/nvim-cmp/wiki/Advanced-techniques#disabling-completion-in-certain-contexts-such-as-comments
+        -- Keep command mode completion enabled when cursor is in a comment.
         if vim.api.nvim_get_mode().mode == 'c' then
           return true
         end
-        -- disable completion in prompts (e.g. Telescope.vim)
+        -- Disable completion in prompts (e.g. Telescope.vim).
         buftype = vim.api.nvim_buf_get_option(0, "buftype")
         if buftype == "prompt" then
           return false
         end
-        -- disable completion in comments
+        -- Disable completion in comments.
         local context = require 'cmp.config.context'
         return not context.in_treesitter_capture("comment")
           and not context.in_syntax_group("Comment")
@@ -107,7 +108,7 @@ local plugins = {
           enable = false,
         },
       })
-      -- Format Go files on save
+      -- Format Go files on save.
       local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*.go",
