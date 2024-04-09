@@ -1,0 +1,26 @@
+[
+  {
+    // Key-binds for editor showing completions.
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrev"
+    }
+  },
+  {
+    // Key-binds for normal and visual mode.
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePrevItem",
+      "space x": "pane::CloseActiveItem",
+      "space X": "pane::CloseInactiveItems",
+      "space f a": "file_finder::Toggle",
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToTypeDefinition",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementation",
+      "g r": "editor::FindAllReferences"
+    }
+  }
+]
