@@ -5,9 +5,11 @@
 /scripts/
 **/internal_*
 
-{{ if not (eq .chezmoi.os "darwin") -}}
-Library/
-{{ else if not (eq .chezmoi.os "linux") -}}
+{{ if ne .chezmoi.os "darwin" -}}
+Library/Application Support/Code
+Library/Application Support/go
+{{ else if ne .chezmoi.os "linux" -}}
 .config/Code/
+.config/go/
 {{ end -}}
 
