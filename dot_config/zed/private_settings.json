@@ -15,5 +15,12 @@
   "telemetry": {
     "diagnostics": false,
     "metrics": false
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "buildFlags": ["-tags", "integration"]
+      }
+    }
   }
 }
