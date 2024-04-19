@@ -1,13 +1,17 @@
-local plugins = {
+return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
         -- For a list of supported languages see:
         -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
-        -- defaults
+        -- Default list:
+        -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/treesitter.lua
         "lua",
+        "luadoc",
+        "printf",
         "vim",
+        "vimdoc",
         -- git
         "git_config",
         "git_rebase",
@@ -26,16 +30,52 @@ local plugins = {
         "rust",
         "sql",
         -- web dev
-        "html",
         "css",
+        "html",
         "javascript",
-        "typescript",
-        "tsx",
         "json",
+        "tsx",
+        "typescript",
         -- misc
         "capnp",
+        "markdown",
+        "markdown_inline",
       },
     },
+  },
+
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        -- Default list:
+        -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvchad/configs/mason.lua
+        "lua-language-server",
+        "stylua",
+      },
+    },
+  },
+
+  {
+    "stevearc/conform.nvim",
+    event = "BufWritePre",
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          lua = { "stylelua" },
+          go = { "goimports", "gofmt" },
+        },
+        format_on_save = {
+          timeout_ms = 500,
+          lsp_fallback = true,
+        },
+      })
+    end,
+  },
+
+  {
+    "numToStr/Comment.nvim",
+    lazy = false,
   },
 
   {
@@ -44,7 +84,7 @@ local plugins = {
       enabled = function()
         -- See: https://github.com/hrsh7th/nvim-cmp/wiki/Advanced-techniques#disabling-completion-in-certain-contexts-such-as-comments
         -- Keep command mode completion enabled when cursor is in a comment.
-        if vim.api.nvim_get_mode().mode == 'c' then
+        if vim.api.nvim_get_mode().mode == "c" then
           return true
         end
         -- Disable completion in prompts (e.g. Telescope.vim).
@@ -53,52 +93,42 @@ local plugins = {
           return false
         end
         -- Disable completion in comments.
-        local context = require 'cmp.config.context'
+        local context = require "cmp.config.context"
         return not context.in_treesitter_capture("comment")
-          and not context.in_syntax_group("Comment")
+            and not context.in_syntax_group("Comment")
       end,
     },
   },
 
   {
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-      local null_ls = require("null-ls")
-      null_ls.setup({
-        sources = {
-          null_ls.builtins.formatting.goimports,
-        },
-      })
-    end,
-  },
-
-  {
     "folke/trouble.nvim",
-    requires = "nvim-tree/nvim-web-devicons",
-    config = function()
-      require("trouble").setup()
-    end,
+    branch = "dev",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {},
   },
 
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "jose-elias-alvarez/null-ls.nvim",
       "folke/trouble.nvim",
     },
     config = function()
+      require("nvchad.configs.lspconfig").defaults()
     end,
   },
 
   {
     "ray-x/go.nvim",
     dependencies = {
-      "ray-x/guihua.lua",
-      "neovim/nvim-lspconfig",
       "nvim-treesitter/nvim-treesitter",
+      "neovim/nvim-lspconfig",
+      "ray-x/guihua.lua",
     },
     config = function()
-      local base = require("plugins.configs.lspconfig")
+      -- Configure based on nvchad lspconfig.
+      local base = require("nvchad.configs.lspconfig")
       require("go").setup({
         lsp_on_attach = base.on_attach,
         lsp_cfg = {
@@ -108,25 +138,9 @@ local plugins = {
           enable = false,
         },
       })
-      -- Format Go files on save.
-      local format_sync_grp = vim.api.nvim_create_augroup("GoImport", {})
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        pattern = "*.go",
-        callback = function()
-          -- require("go.format").goimport() -- slower than just using vim.lsp.buf.format?
-          vim.lsp.buf.format({ async = false })
-        end,
-        group = format_sync_grp,
-      })
     end,
-    ft = {"go", "gomod"},
+    ft = { "go", "gomod" },
     build = ":lua require('go.install').update_all_sync()",
   },
 
-  {
-    "numToStr/Comment.nvim",
-    lazy = false,
-  },
 }
-
-return plugins
