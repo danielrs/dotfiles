@@ -1,0 +1,62 @@
+import = [
+  "~/.config/alacritty/solarized_light.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "Full"
+opacity = 0.9875
+option_as_alt = "Both"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 0
+y = 0
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+size = 14.25
+
+[font.normal]
+family = "SauceCodePro Nerd Font"
+style = "Medium"
+
+[font.bold]
+family = "SauceCodePro Nerd Font"
+style = "SemiBold"
+
+[font.italic]
+family = "SauceCodePro Nerd Font"
+style = "Medium Italic"
+
+[font.bold_italic]
+family = "SauceCodePro Nerd Font"
+style = "SemiBold Italic"
+
+[font.offset]
+x = 0
+y = 0
+
+[cursor]
+unfocused_hollow = true
+
+[cursor.style]
+shape = "Block"
+blinking = "Always"
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+[[keyboard.bindings]]
+key = "N"
+mods = "Command"
+action = "SpawnNewInstance"
