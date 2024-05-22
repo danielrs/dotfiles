@@ -1,0 +1,104 @@
+keybinds {
+  unbind "Ctrl b" // disable Tmux mode
+  locked {
+    unbind "Ctrl g"; bind "Alt g" { SwitchToMode "Normal"; }
+  }
+  normal {
+  }
+  pane {
+    unbind "Ctrl p"; bind "Alt p" { SwitchToMode "Normal"; }
+  }
+  renamepane {
+    bind "Ctrl c" { UndoRenamePane; SwitchToMode "Normal"; }
+    bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
+  }
+  tab {
+    unbind "Ctrl t"; bind "Alt t" { SwitchToMode "Normal"; }
+    bind "," { MoveTab "left"; }
+    bind "." { MoveTab "right"; }
+  }
+  renametab {
+    bind "Ctrl c" { UndoRenameTab; SwitchToMode "Normal"; }
+    bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
+  }
+  resize {
+    unbind "Ctrl n"; bind "Alt z" { SwitchToMode "Normal"; }
+  }
+  move {
+    unbind "Ctrl h"; bind "Alt v" { SwitchToMode "Normal"; }
+  }
+  scroll {
+    unbind "Ctrl s"; bind "Alt s" { SwitchToMode "Normal"; }
+  }
+  search {
+    unbind "Ctrl s"; bind "Alt s" { SwitchToMode "Normal"; }
+  }
+  entersearch {
+    bind "Ctrl c" { SwitchToMode "Normal"; }
+    bind "Esc" { SwitchToMode "Scroll"; }
+    bind "Enter" { SwitchToMode "Search"; }
+  }
+  session {
+    unbind "Ctrl o"; bind "Alt o" { SwitchToMode "Normal"; }
+  }
+  tmux {
+    unbind "Ctrl b"; bind "Alt b" { SwitchToMode "Normal"; }
+  }
+  shared_except "normal" "locked" {
+    bind "Enter" "Esc" { SwitchToMode "Normal"; }
+  }
+  shared_except "locked" {
+    unbind "Ctrl g"; // was Locked, now Alt-g
+    unbind "Ctrl p"; // was Pane, now Alt-p
+    unbind "Ctrl t"; // was Tab, now Alt-t
+    unbind "Ctrl n"; // was Resize, now Alt-z
+    unbind "Ctrl h"; // was Move, now Alt-v
+    unbind "Ctrl s"; // was Search, now Alt-s
+    unbind "Ctrl o"; // was Session, now Alt-o
+    unbind "Ctrl b"; // was Tmux, now Alt-b
+    unbind "Ctrl q"; bind "Alt q" { Quit; }
+    bind "Alt ," { MoveTab "left"; }
+    bind "Alt ." { MoveTab "right"; }
+  }
+  shared_except "pane" "locked" {
+    bind "Alt p" { SwitchToMode "Pane"; }
+  }
+  shared_except "tab" "locked" {
+    bind "Alt t" { SwitchToMode "Tab"; }
+  }
+  shared_except "resize" "locked" {
+    bind "Alt z" { SwitchToMode "Resize"; }
+  }
+  shared_except "move" "locked" {
+    bind "Alt v" { SwitchToMode "Move"; }
+  }
+  shared_except "scroll" "locked" {
+    bind "Alt s" { SwitchToMode "Scroll"; }
+  }
+  shared_except "session" "locked" {
+    bind "Alt o" { SwitchToMode "Session"; }
+  }
+}
+
+theme "custom"
+
+themes {
+  // Based on Solarized and Everforest:
+  // https://ethanschoonover.com/solarized/
+  // https://github.com/sainnhe/everforest
+  // Confusing for now, but works until we have better theming:
+  // https://github.com/zellij-org/zellij/pull/3242
+  custom {
+    fg "#d8d3ba"      // everforest: soft bg4
+    bg "#eee8d5"      // solarized: base2
+    black "#fdf6e3"   // solarized: base3
+    white "#586e75"   // solarized: base01
+    red "#dc322f"     // solarized: red
+    green "#859900"   // solarized: green
+    yellow "#b58900"  // solarized: yellow
+    blue "#268bd2"    // solarized: blue
+    magenta "#d33682" // solarized: magenta
+    cyan "#2aa198"    // solarized: cyan
+    orange "#cb4b16"  // solarized: orange
+  }
+}
