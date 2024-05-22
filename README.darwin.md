@@ -33,6 +33,11 @@ chsh -s /usr/local/bin/fish
 
 - Pin all your favorite apps to the dock
 
+- Set preferred size (note default is `64`)
+  ```
+  defaults write com.apple.dock tilesize -int 32; killall Dock`
+  ```
+
 #### Display
 
 - Uncheck *System Preferences* -> *Displays* -> *Display* -> *Automatically adjust brightness*
@@ -60,7 +65,6 @@ Go to *System Preferences* -> *Keyboard* -> *Shortcuts*:
 - *Mission Control* -> *Move left a space*: `Ctrl+[`
 
 - *Mission Control* -> *Move right a space*: `Ctrl+]`
-
 
 #### Mission control
 
