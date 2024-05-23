@@ -14,3 +14,6 @@ curl -fsSL "$URL" -o "$ARCHIVE"
 tar -xzf "$ARCHIVE" --strip-components 1 -C "$DEST"
 rm "$ARCHIVE"
 
+# remove themes we don't need (they make shell startup slower)
+cd "$DEST/scripts"
+ls | grep -v -e "base16-solarized-.*" | xargs -I{} rm {}

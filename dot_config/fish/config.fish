@@ -56,5 +56,6 @@ set -x BASE16_SHELL_SET_BACKGROUND false
 if status --is-interactive
     set BASE16_SHELL "$HOME/.config/base16-shell/"
     source "$BASE16_SHELL/profile_helper.fish"
+    base16-solarized-light
 end
 
