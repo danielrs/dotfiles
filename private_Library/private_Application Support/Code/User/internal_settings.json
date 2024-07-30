@@ -48,6 +48,10 @@
         "before": ["g", "I"],
         "commands": ["references-view.findImplementations"],
       },
+      {
+        "before": ["C-k"],
+        "commands": ["editor.action.showHover"],
+      },
     ],
 
     "[dart]": {

@@ -15,12 +15,8 @@
 [includeIf "gitdir:~/Development/"]
     path = ~/Development/.gitconfig_include
 
+[includeIf "gitdir:~/Development/github.com/"]
+    path = ~/Development/github.com/.gitconfig_include
+
 [includeIf "gitdir:~/Development/cloudflare/"]
     path = ~/Development/cloudflare/.gitconfig_include
-
-[includeIf "gitdir:~/Development/clearblade/"]
-    path = ~/Development/clearblade/.gitconfig_include
-
-[includeIf "gitdir:~/Development/deepcast/"]
-    path = ~/Development/deepcast/.gitconfig_include
-

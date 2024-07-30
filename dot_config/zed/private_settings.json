@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   "theme": "Solarized Light",
-  "buffer_font_family": "Zed Mono",
+  "buffer_font_family": "SauceCodePro Nerd Font Mono",
   "buffer_font_size": 14,
   "ui_font_size": 16,
   "vim_mode": true,
