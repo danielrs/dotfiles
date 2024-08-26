@@ -5,7 +5,6 @@
 local M = {}
 
 M.ui = {
-  theme = "everforest_light",
   nvdash = {
     load_on_startup = true,
   },
@@ -34,6 +33,10 @@ M.ui = {
       end
     },
   },
+}
+
+M.base46 = {
+  theme = "everforest_light",
 }
 
 return M

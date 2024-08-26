@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 -- See: https://github.com/folke/lazy.nvim?tab=readme-ov-file#-installation
 
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system {
     "git",
     "clone",
@@ -26,9 +26,6 @@ require("lazy").setup({
     lazy = false,
     branch = "v2.5",
     import = "nvchad.plugins",
-    config = function()
-      require "options"
-    end,
   },
   { import = "plugins" },
 }, lazy_config)
@@ -37,6 +34,10 @@ require("lazy").setup({
 
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
+
+-- Load options (NOT vim.schedule).
+
+require "options"
 
 -- Load autocmds (NOT vim.schedule).
 
