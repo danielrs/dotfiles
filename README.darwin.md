@@ -8,13 +8,20 @@ brew analytics off
 ### Install CLI tools
 
 ```
-brew install fish ripgrep fd sd vivid jq coreutils navi neovim
+brew install fish ripgrep fd sd vivid jq coreutils navi neovim zellij
 ```
 
 ### Install cask apps
 
 ```
-brew install --cask rectangle firefox kitty visual-studio-code spotify
+brew install --cask alacritty rectangle firefox visual-studio-code zed spotify
+```
+
+### Install Visual Studio Code extensions
+
+```
+code --install-extension vscodevim.vim
+code --install-extension golang.go
 ```
 
 ### Fish shell
@@ -33,34 +40,39 @@ chsh -s /usr/local/bin/fish
 
 - Pin all your favorite apps to the dock
 
-- Set preferred size (note default is `64`)
-  ```
-  defaults write com.apple.dock tilesize -int 32; killall Dock`
-  ```
+### Dock size
+
+Set preferred size (note default is `64`)
+
+```
+defaults write com.apple.dock tilesize -int 54; killall Dock
+```
+
+Note that we choose `54` because that's the perfect size for the terminal and font configuration.
 
 #### Display
 
-- Uncheck *System Preferences* -> *Displays* -> *Display* -> *Automatically adjust brightness*
+- Uncheck *System Settings* -> *Displays* -> *Automatically adjust brightness*
 
 - Set brightness to desired level
 
-#### Touch Bar
+#### Touch bar
 
-Go to *System Preferences* -> *Keyboard* -> *Customize Control Strip*:
+Go to *System Settings* -> *Keyboard* -> *Touch Bar Settings* -> *Customize Control Strip*:
 
 - Replace Siri icon with Spotlight
 
 #### Keyboard text settings
 
-- Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Capitalize words automatically*
+- Uncheck *System preferences* -> *Keyboard* -> *Spelling and prediction* -> *Capitalize words automatically*
 
-- Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Add period with double-space*
+- Uncheck *System preferences* -> *Keyboard* -> *Spelling and prediction* -> *Add period with double-space*
 
-- Uncheck *System preferences* -> *Keyboard* -> *Text* -> *Touch Bar typing suggestions*
+- Uncheck *System preferences* -> *Keyboard* -> *Spelling and prediction* -> *Touch Bar typing suggestions*
 
 #### Keyboard shortcuts
 
-Go to *System Preferences* -> *Keyboard* -> *Shortcuts*:
+Go to *System Settings* -> *Keyboard* -> *Shortcuts*:
 
 - *Mission Control* -> *Move left a space*: `Ctrl+[`
 
@@ -68,7 +80,7 @@ Go to *System Preferences* -> *Keyboard* -> *Shortcuts*:
 
 #### Mission control
 
-- Uncheck *System Preferences* -> *Mission Control* -> *Automatically rearrange Spaces based on most recent use*
+- Uncheck *System Settings* -> *Desktop and Dock* -> *Mission Control* -> *Automatically rearrange Spaces based on most recent use*
 
 #### Desktop Add more desktops
 

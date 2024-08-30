@@ -7,15 +7,15 @@ runtitle "Installing Golang..."
 PREFIX="$HOME/.golang"
 # get latest golang version
 # see: https://stackoverflow.com/a/57725365
-VERSION="$(curl -fsSL https://golang.org/VERSION?m=text)"
+VERSION="$(curl -fsSL https://go.dev/VERSION?m=text | head -n 1)"
 
 # detect system
 
 if [ "$(uname)" = Darwin ]; then
-    GOLANG_URL="https://golang.org/dl/$VERSION.darwin-amd64.tar.gz"
+    GOLANG_URL="https://go.dev/dl/$VERSION.darwin-amd64.tar.gz"
 
 elif [ "$(uname)" = Linux ]; then
-    GOLANG_URL="https://golang.org/dl/$VERSION.linux-amd64.tar.gz"
+    GOLANG_URL="https://go.dev/dl/$VERSION.linux-amd64.tar.gz"
 
 else
     echo "unable to detect system"

@@ -28,7 +28,7 @@ curl -fsSL "$HOMEBREW_URL" -o "$INSTALLER"
 
 echo "Installing..."
 chmod +x "$INSTALLER"
-CI=1 "$INSTALLER"
+NONINTERACTIVE=1 "$INSTALLER"
 rm "$INSTALLER"
 
 {{ end -}}
