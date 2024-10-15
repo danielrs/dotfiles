@@ -5,9 +5,6 @@
 local M = {}
 
 M.ui = {
-  nvdash = {
-    load_on_startup = true,
-  },
   -- statusline:
   -- https://nvchad.com/docs/config/nvchad_ui#tabufline_and_statusline
   -- Ordering taken from:
@@ -37,6 +34,10 @@ M.ui = {
 
 M.base46 = {
   theme = "everforest_light",
+}
+
+M.nvdash = {
+  load_on_startup = true,
 }
 
 return M
