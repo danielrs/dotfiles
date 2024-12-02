@@ -1,0 +1,20 @@
+themes {
+    // Based on Solarized and Everforest:
+    // https://ethanschoonover.com/solarized/
+    // https://github.com/sainnhe/everforest
+    // Confusing for now, but works until we have better theming:
+    // https://github.com/zellij-org/zellij/pull/3242
+    solarized-light {
+        fg "#d8d3ba"      // everforest: soft bg4
+        bg "#eee8d5"      // solarized: base2
+        black "#fdf6e3"   // solarized: base3
+        white "#586e75"   // solarized: base01
+        red "#dc322f"     // solarized: red
+        green "#859900"   // solarized: green
+        yellow "#b58900"  // solarized: yellow
+        blue "#268bd2"    // solarized: blue
+        magenta "#d33682" // solarized: magenta
+        cyan "#2aa198"    // solarized: cyan
+        orange "#cb4b16"  // solarized: orange
+    }
+}
