@@ -20,3 +20,21 @@
 
 [includeIf "gitdir:~/Development/cloudflare/"]
     path = ~/Development/cloudflare/.gitconfig_include
+
+# ----------------
+# Diff
+# ----------------
+# See: https://github.com/dandavison/delta
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+
+[merge]
+    conflictstyle = zdiff3
+

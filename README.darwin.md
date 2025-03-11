@@ -8,13 +8,13 @@ brew analytics off
 ### Install CLI tools
 
 ```
-brew install fish ripgrep fd sd vivid jq coreutils navi neovim zellij
+brew install coreutils delta fd fish jq navi neovim ripgrep sd vivid zellij
 ```
 
 ### Install cask apps
 
 ```
-brew install --cask alacritty rectangle firefox visual-studio-code zed spotify
+brew install --cask alacritty firefox rectangle spotify visual-studio-code zed
 ```
 
 ### Install Visual Studio Code extensions
