@@ -38,6 +38,7 @@ return {
         "typescript",
         -- misc
         "capnp",
+        "hurl",
         "markdown",
         "markdown_inline",
       },
