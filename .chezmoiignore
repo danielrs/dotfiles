@@ -8,8 +8,10 @@
 {{ if ne .chezmoi.os "darwin" -}}
 Library/Application Support/Code
 Library/Application Support/go
+Library/Application Support/Windsurf
 {{ else if ne .chezmoi.os "linux" -}}
 .config/Code/
 .config/go/
+.config/Windsurf/
 {{ end -}}
 

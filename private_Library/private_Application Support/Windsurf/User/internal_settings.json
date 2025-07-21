@@ -1,0 +1,112 @@
+{
+  "editor.fontFamily": "'SauceCodePro Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontWeight": "500",
+  "editor.fontSize": 14,
+  "files.trimTrailingWhitespace": true,
+  "telemetry.telemetryLevel": "off",
+  "workbench.colorTheme": "Solarized Light",
+
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["Tab"],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": ["<S-Tab>"],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": ["<leader>", "X"],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      "before": ["<leader>", "f", "a"],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": ["<leader>", "f", "o"],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": ["g", "R"],
+      "commands": [
+        "references-view.findReferences"
+      ]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    {
+      "before": ["g", "I"],
+      "commands": [
+        "references-view.findImplementations"
+      ]
+    },
+    {
+      "before": ["C-k"],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    }
+  ],
+
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+
+  "[nim]": {
+    "editor.tabSize": 2
+  },
+
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+
+  "dart.debugExternalLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "dart.previewLsp": true,
+
+  "go.formatTool": "goimports",
+  "go.goroot": "~/.golang",
+  "go.gopath": "~/Development/go",
+  "go.useLanguageServer": true
+}

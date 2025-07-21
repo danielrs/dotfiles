@@ -9,49 +9,71 @@
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
       {
-        "before": ["Tab"],
-        "commands": ["workbench.action.nextEditor"],
+          "before": ["Tab"],
+          "commands": [
+            "workbench.action.nextEditor"
+          ]
       },
       {
-        "before": ["<S-Tab>"],
-        "commands": ["workbench.action.previousEditor"],
+          "before": ["<S-Tab>"],
+          "commands": [
+            "workbench.action.previousEditor"
+          ]
       },
       {
-        "before": ["<leader>", "x"],
-        "commands": ["workbench.action.closeActiveEditor"],
+          "before": ["<leader>", "x"],
+          "commands": [
+            "workbench.action.closeActiveEditor"
+          ]
       },
       {
-        "before": ["<leader>", "X"],
-        "commands": ["workbench.action.closeOtherEditors"],
+          "before": ["<leader>", "X"],
+          "commands": [
+            "workbench.action.closeOtherEditors"
+          ]
       },
       {
-        "before": ["<leader>", "f", "a"],
-        "commands": ["workbench.action.quickOpen"],
+          "before": ["<leader>", "f", "a"],
+          "commands": [
+            "workbench.action.quickOpen"
+          ]
       },
       {
-        "before": ["<leader>", "f", "o"],
-        "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"],
+          "before": ["<leader>", "f", "o"],
+          "commands": [
+            "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+          ]
       },
       {
-        "before": ["g", "r"],
-        "commands": ["editor.action.goToReferences"],
+          "before": ["g", "r"],
+          "commands": [
+            "editor.action.goToReferences"
+          ]
       },
       {
-        "before": ["g", "R"],
-        "commands": ["references-view.findReferences"],
+          "before": ["g", "R"],
+          "commands": [
+            "references-view.findReferences"
+          ]
       },
       {
-        "before": ["g", "i"],
-        "commands": ["editor.action.goToImplementation"],
+          "before": ["g", "i"],
+          "commands": [
+            "editor.action.goToImplementation"
+          ]
       },
       {
-        "before": ["g", "I"],
-        "commands": ["references-view.findImplementations"],
+          "before": ["g", "I"],
+          "commands": [
+            "references-view.findImplementations"
+          ]
       },
       {
-        "before": ["C-k"],
-        "commands": ["editor.action.showHover"],
-      },
+          "before": ["C-k"],
+          "commands": [
+            "editor.action.showHover"
+          ]
+      }
     ],
 
     "[dart]": {
