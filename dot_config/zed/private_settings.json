@@ -30,7 +30,6 @@
     "edit_prediction_provider": "none"
   },
   "agent": {
-    "version": "2",
     "enabled": true
   }
 }
