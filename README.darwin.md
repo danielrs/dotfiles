@@ -8,7 +8,7 @@ brew analytics off
 ### Install CLI tools
 
 ```
-brew install coreutils delta fd fish jq navi neovim ripgrep sd vivid zellij
+brew install coreutils delta fd fish fnm jq navi neovim ripgrep sd vivid zellij
 ```
 
 ### Install cask apps
@@ -26,65 +26,64 @@ code --install-extension golang.go
 
 ### Fish shell
 
-Add `/usr/local/bin/fish` to `/etc/shells`, and then run:
+Add Fish path `which fish` to `/etc/shells/`, and then run:
 
 ```
-chsh -s /usr/local/bin/fish
+chsh -s $(which fish)
 ```
 
 ### System preferences
 
 #### Dock
 
-- Remove all unnecessary icons
+- Remove all unnecessary icons.
 
-- Pin all your favorite apps to the dock
+- Pin all your favorite apps to the dock.
 
 ### Dock size
 
-Set preferred size (note default is `64`)
+Set preferred size (note default is `64`), some recommendations:
+
+- Intel MacBook Pro 16 `54`.
+- Apple Chip MacBook Pro 16 `56`.
 
 ```
-defaults write com.apple.dock tilesize -int 54; killall Dock
+defaults write com.apple.dock tilesize -int 56; killall Dock
 ```
 
-Note that we choose `54` because that's the perfect size for the terminal and font configuration.
+Note the best size heavily depends on the font size, menu bar size, and etc.
 
 #### Display
 
-- Uncheck *System Settings* -> *Displays* -> *Automatically adjust brightness*
+- Disable automatic brightness.
 
-- Set brightness to desired level
+- Set brightness to desired level.
 
 #### Touch bar
 
-Go to *System Settings* -> *Keyboard* -> *Touch Bar Settings* -> *Customize Control Strip*:
-
-- Replace Siri icon with Spotlight
+- Replace Siri icon with Spotlight.
 
 #### Keyboard text settings
 
-- Uncheck *System preferences* -> *Keyboard* -> *Spelling and prediction* -> *Capitalize words automatically*
+- Disable *Capitalize words automatically*.
 
-- Uncheck *System preferences* -> *Keyboard* -> *Spelling and prediction* -> *Add period with double-space*
+- Disable *Add period with double-space*.
 
-- Uncheck *System preferences* -> *Keyboard* -> *Spelling and prediction* -> *Touch Bar typing suggestions*
+- Disable *Touch Bar typing suggestions*.
 
 #### Keyboard shortcuts
 
-Go to *System Settings* -> *Keyboard* -> *Shortcuts*:
+- *Mission Control* -> *Move left a space*: `Ctrl+[`.
 
-- *Mission Control* -> *Move left a space*: `Ctrl+[`
-
-- *Mission Control* -> *Move right a space*: `Ctrl+]`
+- *Mission Control* -> *Move right a space*: `Ctrl+]`.
 
 #### Mission control
 
-- Uncheck *System Settings* -> *Desktop and Dock* -> *Mission Control* -> *Automatically rearrange Spaces based on most recent use*
+- Disable *Mission Control* -> *Automatically rearrange Spaces based on most recent use*.
 
 #### Desktop Add more desktops
 
-- Set preferred background
+- Set preferred background.
 
-- Swipe three fingers up on the touchpad and add more desktops
+- Swipe three fingers up on the touchpad and add more desktops.
 
