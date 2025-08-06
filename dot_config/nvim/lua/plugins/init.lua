@@ -102,6 +102,10 @@ return {
   },
 
   {
+    import = "nvchad.blink.lazyspec",
+  },
+
+  {
     "folke/trouble.nvim",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
