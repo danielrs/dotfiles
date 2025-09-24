@@ -4,7 +4,7 @@
   "editor.fontSize": 14,
   "files.trimTrailingWhitespace": true,
   "telemetry.telemetryLevel": "off",
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Catppuccin Latte",
 
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
