@@ -32,8 +32,12 @@
 [interactive]
     diffFilter = delta --color-only
 
+[include]
+	path = ~/.config/delta/themes/catppuccin.gitconfig
+
 [delta]
     navigate = true
+    features = catppuccin-latte
 
 [merge]
     conflictstyle = zdiff3

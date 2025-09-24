@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Zed Legacy: Solarized Light",
+  "theme": "Catppuccin Latte",
   "buffer_font_family": "SauceCodePro Nerd Font Mono",
   "buffer_font_size": 14,
   "ui_font_size": 16,
@@ -26,7 +26,6 @@
     }
   },
   "features": {
-    "copilot": false,
     "edit_prediction_provider": "none"
   },
   "agent": {
