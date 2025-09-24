@@ -1,3 +1,5 @@
+fish_config theme choose "Catppuccin Frappe" --color-theme=light
+
 # --------------------------------
 # Exports
 # --------------------------------
