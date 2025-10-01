@@ -8,7 +8,7 @@ brew analytics off
 ### Install CLI tools
 
 ```
-brew install coreutils delta fd fish fnm jq navi neovim ripgrep sd vivid zellij
+brew install bat coreutils delta fd fish fnm jq navi neovim ripgrep sd vivid zellij
 ```
 
 ### Install cask apps
