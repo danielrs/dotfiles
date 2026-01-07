@@ -1,0 +1,17 @@
+{{- $mcpPath := joinPath .chezmoi.sourceDir "dot_config/opencode/mcp/*.json" -}}
+{{- $mcpList := glob $mcpPath -}}
+{
+  "$schema": "https://opencode.ai/config.json",
+  "tools": {
+    {{- range $index, $mcp := $mcpList }}
+    {{- if $index }},{{ end }}
+    "{{ base $mcp | trimSuffix ".json" }}": true
+    {{- end }}
+  },
+  "mcp": {
+    {{- range $index, $mcp := $mcpList }}
+    {{- if $index }},{{ end }}
+    "{{ base $mcp | trimSuffix ".json" }}": {{ include $mcp | indent 4 | trim }}
+    {{- end }}
+  }
+}
