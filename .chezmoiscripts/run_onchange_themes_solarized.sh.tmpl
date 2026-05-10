@@ -1,16 +1,27 @@
 #!/usr/bin/env sh
 # Install Solarized themes.
 # See: https://ethanschoonover.com/solarized/
+
 set -e -u -o pipefail
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Solarized themes..."
 
 function download_theme {
-  output_dir=$1
-  base_url=$2
-  file=$3
+  set +u
+  local output_dir=$1
+  local base_url=$2
+  local file=$3
+  local output_file=$4
+  if [ -z "$4" ]; then
+    output_file=$file
+  fi
   urlencoded=$(echo $file | sed 's/ /%20/g')
   echo "Downloading $base_url/$urlencoded" | tr -s '/'
-  curl -L --fail --output-dir "$output_dir" --output "$file" "$base_url/$urlencoded"
+  curl --no-progress-meter \
+    -L --fail --output-dir "$output_dir" --output "$output_file" "$base_url/$urlencoded"
+  set -u
 }
+
 
 # Alacritty
 # See: https://github.com/alacritty/alacritty-theme
