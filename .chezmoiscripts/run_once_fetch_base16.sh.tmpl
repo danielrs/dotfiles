@@ -1,6 +1,6 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-set -e -u
+set -e -u -o pipefail
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Fetching base16-shell..."
 

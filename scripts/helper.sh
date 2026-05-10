@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Colors
 # ----------------
@@ -11,6 +11,6 @@ YELLOW='\033[1;33m'
 RESET='\033[0m'
 
 runtitle() {
-    echo "${BLUE}Run: $@${RESET}"
+    echo -e "${BLUE}Run: $@${RESET}"
 }
 
