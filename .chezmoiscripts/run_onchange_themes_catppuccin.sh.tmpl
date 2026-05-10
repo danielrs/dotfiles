@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 # Install Catppuccin themes.
 # See: https://catppuccin.com/
+
 set -e -u -o pipefail
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Catppuccin themes..."
 
 function download_theme {
   set +u
@@ -40,7 +43,9 @@ download_theme "$OUTPUT_DIR" "$BASE_URL" "Catppuccin Frappe.tmTheme"
 download_theme "$OUTPUT_DIR" "$BASE_URL" "Catppuccin Latte.tmTheme"
 download_theme "$OUTPUT_DIR" "$BASE_URL" "Catppuccin Macchiato.tmTheme"
 download_theme "$OUTPUT_DIR" "$BASE_URL" "Catppuccin Mocha.tmTheme"
-bat cache --build
+if command -v bat 1>/dev/null 2>&1; then
+  bat cache --build
+fi
 
 # Delta
 # See: https://github.com/catppuccin/delta
