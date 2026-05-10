@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+{{ if eq .chezmoi.os "linux" -}}
+
+set -e -u -o pipefail
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Linux packages..."
+
+# APT
+
+echo "Will ask for sudo for installing APT packages"
+sudo -v || { echo "Sudo failed. Exiting."; exit 1; }
+
+{{ range .packages.linux.apt_ppa }}
+sudo add-apt-repository --yes ppa:{{ . }}
+{{ end -}}
+
+sudo apt install --yes {{ join " " .packages.linux.apt }}
+
+# Homebrew
+
+/home/linuxbrew/.linuxbrew/bin/brew bundle --file=/dev/stdin <<EOF
+{{ range .packages.any.brew -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .packages.any.brew_cask -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .packages.linux.brew -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .packages.linux.brew_cask -}}
+cask {{ . | quote }}
+{{ end -}}
+EOF
+
+{{ end -}}
