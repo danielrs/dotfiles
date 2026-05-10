@@ -1,18 +1,19 @@
 function fish_prompt --description "Sets the prompt"
 
-    set user (whoami)
+    set --local user_color green
+    set --local user_char ">"
+    if fish_is_root_user
+        set --local user_color red
+        set --local user_char "\$"
+    end
 
     # Openning bracket
     set_color blue
     echo -n "["
 
     # Username
-    if test "$user" = 'root'
-        set_color red
-    else
-        set_color green
-    end
-    echo -n (whoami)
+    set_color $user_color
+    echo -n "$USER"
 
     # At symbol
     set_color blue
@@ -30,16 +31,9 @@ function fish_prompt --description "Sets the prompt"
     echo -n "] "
 
     # Prompt symbol
-    set_color green
-    if test (id -u) = 0
-        set_color red
-        echo -n "\$ "
-    else
-        set_color green
-        echo -n "> "
-    end
+    set_color $user_color
+    echo -n $user_char" "
 
     # Back to normal colors
     set_color normal
 end
-
