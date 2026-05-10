@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -e -u -o pipefail
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Homebrew..."
+
+# skip if already installed
+
+{{ if eq .chezmoi.os "darwin" -}}
+HOMEBREW_PREFIX="/opt/homebrew/bin"
+{{ else -}}
+HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew/bin"
+{{ end -}}
+
+if test -d "$HOMEBREW_PREFIX"; then
+    echo "Homebrew already installed. Try to update it using 'brew update'"
+    exit 0
+fi
+
+# download and install
+
+HOMEBREW_URL='https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh'
+INSTALLER="./homebrew-installer.sh"
+
+echo "Downloading Homebrew (latest)..."
+curl -fsSL "$HOMEBREW_URL" -o "$INSTALLER"
+
+echo "Installing..."
+chmod +x "$INSTALLER"
+"$INSTALLER"
+rm "$INSTALLER"
+
+# turn off analytics
+
+"$HOMEBREW_PREFIX/brew" analytics off

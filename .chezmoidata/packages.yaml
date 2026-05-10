@@ -1,0 +1,34 @@
+packages:
+  any:
+    brew:
+      - bat
+      - delta
+      - fd
+      - fish
+      - fnm
+      - helix
+      - jq
+      - navi
+      - neovim
+      - ripgrep
+      - sd
+      - vivid
+      - yq
+      - zellij
+    brew_cask: []
+  darwin:
+    brew:
+      - coreutils
+    brew_cask:
+      - alacritty
+      - firefox
+      - rectangle
+      - visual-studio-code
+      - zed
+  linux:
+    apt_ppa:
+      - aslatter/ppa # alacritty
+    apt:
+      - alacritty
+    brew: []
+    brew_cask: []

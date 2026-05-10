@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+{{ if eq .chezmoi.os "darwin" -}}
+
+set -e -u -o pipefail
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing Darwin packages..."
+
+brew bundle --file=/dev/stdin <<EOF
+{{ range .packages.any.brew -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .packages.any.brew_cask -}}
+cask {{ . | quote }}
+{{ end -}}
+{{ range .packages.darwin.brew -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ range .packages.darwin.brew_cask -}}
+cask {{ . | quote }}
+{{ end -}}
+EOF
+
+{{ end -}}
