@@ -1,7 +1,7 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # see: https://gist.github.com/enzinier/8d00d3f37d2e23985dcfa65662d163fa
 
-set -e -u
+set -e -u -o pipefail
 . '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
 runtitle "Installing Nerd Fonts..."
 
