@@ -8,26 +8,28 @@ PREFIX="$HOME/.golang"
 # get latest golang version
 # see: https://stackoverflow.com/a/57725365
 VERSION="$(curl -fsSL https://go.dev/VERSION?m=text | head -n 1)"
+
+# detect kernel
+
+KERNEL="$(uname -s | tr '[:upper:]' '[:lower:]')" # will be either "Linux" or "Darwin"
+
+# detect architecture
+
 ARCH="$(uname -m)"
 
-# detect system
-
-if [ "$(uname)" = Darwin ]; then
-    GOLANG_URL="https://go.dev/dl/$VERSION.darwin-$ARCH.tar.gz"
-
-elif [ "$(uname)" = Linux ]; then
-    GOLANG_URL="https://go.dev/dl/$VERSION.linux-$ARCH.tar.gz"
-
-else
-    echo "unable to detect system"
-    exit 1
-fi
+case "$ARCH" in
+    x86_64)
+        ARCH=amd64
+        ;;
+esac
 
 # download and install
 
+GOLANG_URL="https://go.dev/dl/$VERSION.$KERNEL-$ARCH.tar.gz"
+
 ARCHIVE="./golang.tar.gz"
 
-echo "Downloading Go ($VERSION)..."
+echo "Downloading Go ($VERSION) from $GOLANG_URL..."
 curl -fsSL "$GOLANG_URL" -o "$ARCHIVE"
 
 echo "Extracting archive..."
