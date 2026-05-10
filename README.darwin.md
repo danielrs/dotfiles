@@ -24,14 +24,6 @@ code --install-extension vscodevim.vim
 code --install-extension golang.go
 ```
 
-### Fish shell
-
-Add Fish path `which fish` to `/etc/shells/`, and then run:
-
-```
-chsh -s $(which fish)
-```
-
 ### System preferences
 
 #### Dock

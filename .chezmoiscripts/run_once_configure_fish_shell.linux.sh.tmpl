@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e -u -o pipefail
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Configuring fish shell..."
+
+{{ if eq .chezmoi.os "linux" -}}
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+{{ end -}}
+
+if [ -z $(grep "fish" "/etc/shells") ]; then
+    echo "Will ask for sudo for adding Fish to valid shells"
+    command -v fish | sudo tee -a /etc/shells
+fi
+
+echo "Will ask for sudo for changing shell"
+chsh -s "$(command -v fish)"
