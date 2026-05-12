@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+{{ if eq .chezmoi.os "darwin" -}}
+
+set -e -u -o pipefail
+. '{{ .chezmoi.sourceDir }}/scripts/helper.sh'
+runtitle "Installing VSCode packages..."
+
+{{ range .vscode.extensions -}}
+/opt/homebrew/bin/code --install-extension {{ . }}
+{{ end -}}
+
+{{ end -}}
