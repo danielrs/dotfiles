@@ -29,7 +29,7 @@ history = 10000
 multiplier = 3
 
 [font]
-size = 14.25
+size = 14.00
 
 [font.normal]
 family = "SauceCodePro Nerd Font"
