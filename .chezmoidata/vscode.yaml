@@ -1,0 +1,5 @@
+vscode:
+  extensions:
+    - catppuccin.catppuccin-vsc
+    - golang.go
+    - vscodevim.vim
