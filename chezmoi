@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e -u -o pipefail
+
+# see: https://stackoverflow.com/a/20434740
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+BINDIR=$HOME/.local/bin
+CHEZMOI="$BINDIR/chezmoi"
+
+# make sure chezmoi was installed
+if ! command -v "$CHEZMOI" >/dev/null 2>&1; then
+  echo "chezmoi binary not found at $CHEZMOI. Please make sure to run the install script."
+  exit 1
+fi
+
+# run with source path override
+"$CHEZMOI" --source "$DIR" "$@" 
+

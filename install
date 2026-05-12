@@ -1,6 +1,5 @@
-#!/usr/bin/env sh
-
-set -e -u
+#!/usr/bin/env bash
+set -e -u -o pipefail
 
 # see: https://stackoverflow.com/a/20434740
 DIR="$( cd "$( dirname "$0" )" && pwd )"
@@ -11,7 +10,6 @@ CHEZMOI="$BINDIR/chezmoi"
 export BINDIR
 curl -fsSL "https://chezmoi.io/get" | sh
 
-# apply dotfiles
+# set permissions 
 chmod 700 "$DIR"
-"$CHEZMOI" apply --source "$DIR"
 
