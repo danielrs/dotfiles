@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Prunes and deletes branches without a remote branch
 set -e -u -o pipefail
-git branch -vv | grep "gone]" | awk '{print $1}' | xargs git branch -D
+git branch -vv | grep "gone]" | awk '{print ($1=="*" || $1=="+") ? $2 : $1}' | xargs git branch -D
