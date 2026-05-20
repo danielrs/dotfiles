@@ -2,6 +2,71 @@
 {{- $mcpList := glob $mcpPath -}}
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "Claude Opus 4.6",
+  "default_agent": "plan",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "awk *": "allow",
+      "basename *": "allow",
+      "cat *": "allow",
+      "command -v *": "allow",
+      "cut *": "allow",
+      "date *": "allow",
+      "diff *": "allow",
+      "dirname *": "allow",
+      "echo *": "allow",
+      "env *": "allow",
+      "file *": "allow",
+      "find *": "allow",
+      "git blame *": "allow",
+      "git branch *": "allow",
+      "git config *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
+      "git ls-files *": "allow",
+      "git remote *": "allow",
+      "git rev-parse *": "allow",
+      "git shortlog *": "allow",
+      "git show *": "allow",
+      "git stash list *": "allow",
+      "git status *": "allow",
+      "git tag *": "allow",
+      "go doc *": "allow",
+      "go env *": "allow",
+      "go list *": "allow",
+      "go version *": "allow",
+      "go vet *": "allow",
+      "grep *": "allow",
+      "head *": "allow",
+      "jq *": "allow",
+      "ls *": "allow",
+      "man *": "allow",
+      "pwd *": "allow",
+      "realpath *": "allow",
+      "rg *": "allow",
+      "sort *": "allow",
+      "stat *": "allow",
+      "tail *": "allow",
+      "tr *": "allow",
+      "type *": "allow",
+      "uniq *": "allow",
+      "wc *": "allow",
+      "which *": "allow",
+      "whoami *": "allow"
+    },
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "webfetch": "allow"
+  },
+  "agent": {
+    "build": {},
+    "plan": {}
+  },
   "tools": {
     {{- range $index, $mcp := $mcpList }}
     {{- if $index }},{{ end }}
