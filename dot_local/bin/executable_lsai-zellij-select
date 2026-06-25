@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -e -u -o pipefail
+
+if [ -z "${ZELLIJ+x}" ]; then
+  echo "Not running inside a Zellij workspace"
+  exit 1
+fi
+
+pane_id=$(lsai sessions --status idle,running,waiting,error --env ZELLIJ_SESSION_NAME=$ZELLIJ_SESSION_NAME --format json | jq --raw-output '["Provider", "Status", "Title", "Pane", "Directory"], (.[] | [.provider, .status, .title, .env.ZELLIJ_PANE_ID, .directory]) | @tsv' | column -t -s $'\t' | fzf --header-lines 1 | awk -F '  +' '{print $4}')
+
+[ -n "$pane_id" ] && zellij action focus-pane-id "$pane_id"

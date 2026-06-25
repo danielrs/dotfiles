@@ -140,6 +140,17 @@ keybinds clear-defaults=true {
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; SwitchToMode "normal"; }
+        bind "Alt i" {
+            Run "lsai-zellij-select" {
+                name "Jump to AI session"
+                floating true
+                close_on_exit true
+                x "0%"
+                y "75%"
+                width "100%"
+                height "100%"
+            }
+        }
     }
     shared_except "locked" {
         bind "Alt q" { Quit; }
