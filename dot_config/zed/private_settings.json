@@ -7,28 +7,38 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "theme": "Catppuccin Latte",
+  "title_bar": {
+    "show_branch_status_icon": true
+  },
   "buffer_font_family": "SauceCodePro Nerd Font Mono",
   "buffer_font_size": 14,
   "ui_font_size": 16,
   "vim_mode": true,
   "auto_signature_help": true,
   "show_signature_help_after_edits": false,
+  "expand_excerpt_lines": 10,
+  "excerpt_context_lines": 5,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "lsp": {
     "gopls": {
       "initialization_options": {
-        "buildFlags": ["-tags", "integration"]
-      }
-    }
-  },
-  "features": {
-    "edit_prediction_provider": "none"
+        "buildFlags": ["-tags", "integration"],
+      },
+    },
   },
   "agent": {
-    "enabled": true
-  }
+    "enabled": true,
+  },
+  "edit_predictions": {
+    "provider": "none",
+  },
 }
