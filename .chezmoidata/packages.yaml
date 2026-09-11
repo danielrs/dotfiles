@@ -10,9 +10,11 @@ packages:
       - jq
       - navi
       - neovim
+      - oven-sh/bun/bun
       - ripgrep
       - sd
       - vivid
+      - worktrunk
       - yq
       - zellij
     brew_cask: []
