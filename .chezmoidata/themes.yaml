@@ -1,0 +1,77 @@
+themes:
+
+  - theme: Solarized
+    url: https://ethanschoonover.com/solarized/
+    items:
+
+      - name: Alacritty
+        output_dir: .config/alacritty/themes
+        repo: https://github.com/alacritty/alacritty-theme
+        base_url: https://github.com/alacritty/alacritty-theme/raw/master/themes
+        items:
+          - "solarized_dark.toml"
+          - "solarized_light.toml"
+
+      - name: Bat
+        skip: true  # Already included.
+
+      - name: Delta
+        skip: true  # TBD.
+
+      - name: Fish
+        skip: true  # Already included.
+
+      - name: Zellij
+        skip: true  # Already included.
+
+  - theme: Catppuccin
+    url: https://catppuccin.com/
+    items:
+
+      - name: Alacritty
+        output_dir: .config/alacritty/themes
+        repo: https://github.com/catppuccin/alacritty
+        base_url: https://github.com/catppuccin/alacritty/raw/main
+        items:
+          - "catppuccin-frappe.toml"
+          - "catppuccin-latte.toml"
+          - "catppuccin-macchiato.toml"
+          - "catppuccin-mocha.toml"
+
+      - name: Bat
+        output_dir: .config/bat/themes
+        repo: https://github.com/catppuccin/bat
+        base_url: https://github.com/catppuccin/bat/raw/main/themes
+        items:
+          - "Catppuccin Frappe.tmTheme"
+          - "Catppuccin Latte.tmTheme"
+          - "Catppuccin Macchiato.tmTheme"
+          - "Catppuccin Mocha.tmTheme"
+        after: |-
+          if command -v bat 1>/dev/null 2>&1; then
+            bat cache --build
+          fi
+
+      - name: Delta
+        output_dir: .config/delta/themes
+        repo: https://github.com/catppuccin/delta
+        base_url: https://github.com/catppuccin/delta/raw/main
+        items:
+          - "catppuccin.gitconfig"
+
+      - name: Fish
+        output_dir: .config/fish/themes
+        repo: https://github.com/catppuccin/fish
+        base_url: https://github.com/catppuccin/fish/raw/main/themes
+        items: # Latte included as a "light" variant in each of the dark themes.
+          - "catppuccin-frappe.theme"
+          - "catppuccin-macchiato.theme"
+          - "catppuccin-mocha.theme"
+
+      - name: Zellij
+        output_dir: .config/zellij/themes
+        repo: https://github.com/catppuccin/zellij
+        base_url: https://github.com/catppuccin/zellij/raw/main
+        items:
+          - "catppuccin.kdl"
+        skip: true # Already included.
