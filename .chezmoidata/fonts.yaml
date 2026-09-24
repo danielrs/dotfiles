@@ -1,0 +1,5 @@
+nerd_fonts:
+  base_url: https://github.com/ryanoasis/nerd-fonts/releases/latest/download
+  items:
+  - JetBrainsMono.zip
+  - SourceCodePro.zip
