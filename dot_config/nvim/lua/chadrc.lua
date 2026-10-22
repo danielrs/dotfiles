@@ -33,7 +33,7 @@ M.ui = {
 }
 
 M.base46 = {
-  theme = "everforest_light",
+  theme = "catppuccin-latte",
 }
 
 M.nvdash = {
